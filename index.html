@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ле Бурже — акватермальный SPA-комплекс в Калининграде. Бассейн, хаммам, массаж, косметология, йога и фитнес.">
+  <meta name="theme-color" content="#f3e1d3">
+  <meta property="og:title" content="Ле Бурже — искусство полноценного отдыха">
+  <meta property="og:description" content="Акватермальный SPA-комплекс в Калининграде: бассейн, массаж, косметология и практики восстановления.">
+  <meta property="og:image" content="assets/images/hero-pool.jpg">
+  <title>Ле Бурже — акватермальный SPA-комплекс</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header" data-header>
+    <a class="brand" href="#top" aria-label="Ле Бурже — на главную">
+      <img class="brand__logo" src="assets/images/lebourget-logo-transparent.webp" alt="Ле Бурже" width="1200" height="400">
+      <span class="brand__caption">SPA · Калининград</span>
+    </a>
+
+    <nav class="main-nav" id="main-nav" aria-label="Основная навигация" data-nav>
+      <a href="#about">О комплексе</a>
+      <a href="#directions">Направления</a>
+      <a href="#offers">Акции</a>
+      <a href="#prices">Цены</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="header-phone" href="tel:+79114522727">+7 911 452 27 27</a>
+      <a class="button button--small button--dark header-book" href="https://dikidi.net/1905232" target="_blank" rel="noopener">Записаться</a>
+      <button class="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Открыть меню" data-menu-toggle>
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <video class="hero__video" id="hero-video" muted loop playsinline preload="none" data-src="assets/video/lebourget-hero.mp4" aria-hidden="true"></video>
+      <div class="hero__shade"></div>
+      <div class="hero__glow hero__glow--peach"></div>
+      <div class="hero__glow hero__glow--blue"></div>
+
+      <div class="hero__content container">
+        <p class="hero__eyebrow reveal">Акватермальный SPA-комплекс в Калининграде</p>
+        <h1 id="hero-title" class="hero__title reveal reveal--delay-1">
+          Всё, чтобы<br>
+          <em>вернуться к себе</em>
+        </h1>
+        <p class="hero__lead reveal reveal--delay-2">Тёплая вода, тишина, прикосновение и свет. Ваш день полноценного отдыха — в пределах города.</p>
+        <div class="hero__actions reveal reveal--delay-3">
+          <a class="button button--primary" href="https://dikidi.net/1905232" target="_blank" rel="noopener">
+            Выбрать процедуру
+            <span aria-hidden="true">↗</span>
+          </a>
+          <a class="button button--glass" href="#directions">Познакомиться с нами</a>
+        </div>
+      </div>
+
+      <aside class="hero-card hero-card--top" aria-label="Время для отдыха">
+        <span class="hero-card__number">2,5</span>
+        <span class="hero-card__text">часа гостевого<br>визита в аквазону</span>
+      </aside>
+      <aside class="hero-card hero-card--bottom" aria-label="Что входит в аквазону">
+        <span class="hero-card__text">Бассейны · хаммам<br>травяная сауна</span>
+      </aside>
+
+    </section>
+
+    <div class="ribbon" aria-hidden="true">
+      <div class="ribbon__track">
+        <div class="ribbon__group"><span>Бассейн</span><i>✦</i><span>Хаммам</span><i>✦</i><span>Массаж</span><i>✦</i><span>Косметология</span><i>✦</i><span>Йога</span><i>✦</i><span>Фитнес</span><i>✦</i></div>
+        <div class="ribbon__group"><span>Бассейн</span><i>✦</i><span>Хаммам</span><i>✦</i><span>Массаж</span><i>✦</i><span>Косметология</span><i>✦</i><span>Йога</span><i>✦</i><span>Фитнес</span><i>✦</i></div>
+      </div>
+    </div>
+
+    <section class="intro section tone-section" id="about" data-motion-lines>
+      <div class="section-sketch section-sketch--intro" aria-hidden="true">
+        <svg viewBox="0 0 1600 900" preserveAspectRatio="none">
+          <path class="art-draw" pathLength="1" d="M-80 164c274 78 414-135 646-42 171 69 242 250 426 195 127-38 203-170 319-128 99 36 128 163 368 94"/>
+          <path class="art-draw art-draw--late" pathLength="1" d="M61 779c276-166 515-84 654 51 147 142 315 91 438-31"/>
+        </svg>
+      </div>
+      <div class="container intro__grid">
+        <div class="intro__copy reveal">
+          <p class="eyebrow">Добро пожаловать в Ле Бурже</p>
+          <h2>Здесь важно всё.<br><em>И в первую очередь — вы.</em></h2>
+          <div class="intro__text">
+            <p>«Ле Бурже» — акватермальный SPA-комплекс, который с первого посещения очаровывает атмосферой. Свет, уют, качество, детали, люди — здесь важно всё.</p>
+            <p>Мы помогаем восстановить силы после насыщенного дня, обрести внутренний баланс и снова почувствовать лёгкость.</p>
+          </div>
+          <div class="intro__signature" aria-hidden="true">le temps pour soi</div>
+        </div>
+
+        <div class="intro__visual reveal reveal--delay-1">
+          <figure class="organic-frame intro__image-main">
+            <img src="assets/images/interior.webp" alt="Светлый интерьер зоны отдыха Ле Бурже" width="1200" height="1500" loading="lazy">
+          </figure>
+          <figure class="intro__image-small">
+            <img src="assets/images/intro-detail.webp" alt="Тёплый кабинет ухода Ле Бурже в терракотовых и молочных оттенках" width="1350" height="1800" loading="lazy">
+          </figure>
+          <div class="intro__seal" aria-hidden="true">
+            <img class="intro__seal-logo" src="assets/images/lebourget-logo-transparent.webp" alt="" width="1200" height="400">
+            <span>отдых · баланс · забота</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="directions section tone-section" id="directions" data-motion-lines aria-labelledby="directions-title">
+      <div class="section-sketch section-sketch--directions" aria-hidden="true">
+        <svg viewBox="0 0 1600 1100" preserveAspectRatio="none">
+          <path class="art-draw" pathLength="1" d="M102 254V116h206v138M356 254V78h278v176M682 254V138h186v116M916 254V48h348v206M1312 254V105h183v149"/>
+          <path class="art-draw art-draw--late" pathLength="1" d="M56 965c293-77 443 58 678-18 237-76 413-31 827 29"/>
+        </svg>
+      </div>
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Соберите свой день</p>
+          <h2 id="directions-title">Пространство для вашего <em>состояния</em></h2>
+          <p>Можно прийти за энергией, тишиной, красотой или всем сразу.</p>
+        </div>
+
+        <div class="direction-grid">
+          <article class="direction-card direction-card--blue reveal" data-motion-lines>
+            <div class="direction-card__image">
+              <img src="assets/images/pool-main.webp" alt="Большой бассейн аквазоны" width="1200" height="1500" loading="lazy">
+              <span class="direction-card__index">01</span>
+            </div>
+            <div class="direction-card__body">
+              <p class="eyebrow">Лёгкость</p>
+              <h3>Аквазона</h3>
+              <p>Большой плавательный бассейн с гидромассажем, детский бассейн, хаммам и травяная сауна.</p>
+              <a href="#aquazone">Подробнее <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="direction-card direction-card--peach reveal reveal--delay-1" data-motion-lines>
+            <div class="direction-card__image">
+              <img src="assets/images/spa-overview.webp" alt="Тёплый массажный кабинет Ле Бурже" width="1800" height="1350" loading="lazy">
+              <span class="direction-card__index">02</span>
+            </div>
+            <div class="direction-card__body">
+              <p class="eyebrow">Прикосновение</p>
+              <h3>SPA и массаж</h3>
+              <p>Классические и тёплые массажи, ритуалы для тела, турецкий уход и процедуры для двоих.</p>
+              <a href="#spa">Подробнее <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="direction-card direction-card--sand reveal" data-motion-lines>
+            <div class="direction-card__image">
+              <img src="assets/images/yoga-outdoor.webp" alt="Практика восстановления на зелёной территории Ле Бурже" width="1350" height="1800" loading="lazy">
+              <span class="direction-card__index">03</span>
+            </div>
+            <div class="direction-card__body">
+              <p class="eyebrow">Движение</p>
+              <h3>Йога и фитнес</h3>
+              <p>Зал с панорамными окнами и видом на лес: йога, мягкие практики, фитнес и медитации.</p>
+              <a href="#balance">Почувствовать ритм <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="direction-card direction-card--rose reveal reveal--delay-1" data-motion-lines>
+            <div class="direction-card__image">
+              <img src="assets/images/cosmetology-overview.webp" alt="Светлый кабинет косметологии Ле Бурже" width="1800" height="1350" loading="lazy">
+              <span class="direction-card__index">04</span>
+            </div>
+            <div class="direction-card__body">
+              <p class="eyebrow">Сияние</p>
+              <h3>Косметология</h3>
+              <p>Уходовые процедуры, LPG-массаж и персональные консультации косметолога-эстетиста.</p>
+              <a href="#cosmetology">Подробнее <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="aquazone section tone-section story-section" id="aquazone" data-image-side="left" data-motion-lines aria-labelledby="aquazone-title">
+      <div class="aquazone__wash" aria-hidden="true"></div>
+      <div class="line-art line-art--water" aria-hidden="true">
+        <svg viewBox="0 0 1600 1000" preserveAspectRatio="none">
+          <g class="art-layer art-layer--one">
+            <path class="art-draw" pathLength="1" d="M-170 248C120 92 286 390 536 247S947 106 1163 256s360 86 572-47"/>
+            <path class="art-draw art-draw--late" pathLength="1" d="M-120 701c203-184 389-37 556-130s358-171 540-23 372 144 757-40"/>
+          </g>
+          <g class="art-layer art-layer--two">
+            <ellipse class="art-draw art-draw--late" pathLength="1" cx="1390" cy="456" rx="260" ry="365"/>
+            <circle class="art-float" cx="215" cy="555" r="64"/>
+            <circle class="art-float art-float--small" cx="324" cy="468" r="18"/>
+          </g>
+        </svg>
+      </div>
+      <div class="container aquazone__grid">
+        <div class="aquazone__visual reveal">
+          <img src="assets/images/hero-pool.webp" alt="Панорамный вид большого бассейна Ле Бурже" width="1100" height="1600" loading="lazy">
+          <div class="aquazone__stamp">33°<span>детский<br>бассейн</span></div>
+        </div>
+        <div class="aquazone__copy reveal reveal--delay-1">
+          <p class="eyebrow">Вода меняет ритм</p>
+          <h2 id="aquazone-title">Аквазона для <em>полной перезагрузки</em></h2>
+          <p class="aquazone__lead">Свет, вода и тишина соединяются здесь в одно ощущение: можно никуда не спешить.</p>
+          <ul class="feature-list">
+            <li><span>01</span> Большой плавательный бассейн и гидромассаж</li>
+            <li><span>02</span> Детский бассейн с комфортной температурой</li>
+            <li><span>03</span> Турецкий хаммам и травяная сауна</li>
+            <li><span>04</span> Летняя терраса с шезлонгами у леса</li>
+          </ul>
+          <div class="price-chips story-prices">
+            <div><span>Взрослый</span><strong>4 000 ₽</strong><small>до 2,5 часов</small></div>
+            <div><span>Ребёнок</span><strong>3 000 ₽</strong><small>до 2,5 часов</small></div>
+            <div><span>Семейный</span><strong>5 000 ₽</strong><small>1 взрослый + 1 ребёнок</small></div>
+          </div>
+          <a class="text-link story-cta" href="https://dikidi.net/1905232" target="_blank" rel="noopener">Запланировать визит <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="spa-story section tone-section story-section" id="spa" data-image-side="right" data-motion-lines aria-labelledby="spa-title">
+      <div class="line-art line-art--touch" aria-hidden="true">
+        <svg viewBox="0 0 1600 1000" preserveAspectRatio="none">
+          <g class="art-layer art-layer--one">
+            <path class="art-draw" pathLength="1" d="M1080-80C900 142 954 415 1174 516c234 107 471-43 512-270"/>
+            <path class="art-draw art-draw--late" pathLength="1" d="M1185-40c-75 164-23 324 132 389 155 66 303-9 367-123"/>
+          </g>
+          <g class="art-layer art-layer--two">
+            <path class="art-draw" pathLength="1" d="M-90 861c224-156 416-168 577-35 121 100 241 113 361 28"/>
+            <path class="art-draw art-draw--late" pathLength="1" d="M208 1012c35-208 149-303 342-286 178 16 280-40 331-168"/>
+          </g>
+        </svg>
+      </div>
+      <div class="container spa-story__grid">
+        <div class="spa-story__visual reveal">
+          <img src="assets/images/massage-room.webp" alt="Тёплый массажный кабинет с панорамным окном" width="1600" height="1200" loading="lazy">
+          <figure class="spa-story__detail">
+            <img src="assets/images/hamam.webp" alt="Турецкий хаммам Ле Бурже" width="1600" height="1000" loading="lazy">
+          </figure>
+          <div class="spa-story__note" aria-hidden="true"><strong>тишина</strong><span>тепло · прикосновение</span></div>
+        </div>
+        <div class="spa-story__copy reveal reveal--delay-1">
+          <p class="eyebrow">Прикосновение, которое возвращает</p>
+          <h2 id="spa-title">SPA и массаж<br><em>в вашем ритме</em></h2>
+          <p class="spa-story__lead">Здесь не нужно выбирать между заботой о теле и внутренней тишиной. Мы собираем ритуал вокруг вашего состояния — от мягкого расслабления до глубокой проработки.</p>
+          <div class="spa-story__services">
+            <div><span>01</span><h3>Массажи</h3><p>Классические, тёплые и восстановительные техники.</p></div>
+            <div><span>02</span><h3>SPA-ритуалы</h3><p>Уходы для тела, ароматы и деликатное тепло.</p></div>
+            <div><span>03</span><h3>Турецкий уход</h3><p>Хаммам, очищение кессе и воздушный пенный массаж.</p></div>
+            <div><span>04</span><h3>Для двоих</h3><p>Время рядом, где всё внимание принадлежит только вам.</p></div>
+          </div>
+          <div class="story-prices">
+            <div><span>Классический массаж</span><strong>3 500 ₽</strong><small>60 минут</small></div>
+            <div><span>SPA-массаж по свече</span><strong>6 400 ₽</strong><small>90 минут</small></div>
+            <div><span>Турецкий уход</span><strong>5 700 ₽</strong><small>90 минут</small></div>
+          </div>
+          <a class="text-link story-cta" href="https://dikidi.net/1905232" target="_blank" rel="noopener">Выбрать свой ритуал <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="balance section tone-section story-section" id="balance" data-image-side="left" data-motion-lines aria-labelledby="balance-title">
+      <div class="line-art line-art--balance" aria-hidden="true">
+        <svg viewBox="0 0 1600 1000" preserveAspectRatio="none">
+          <g class="art-layer art-layer--one">
+            <path class="art-draw" pathLength="1" d="M-70 1010V405C-70 102 154-70 427-70s497 172 497 475v605"/>
+            <path class="art-draw art-draw--late" pathLength="1" d="M81 1010V424c0-206 151-329 346-329s346 123 346 329v586"/>
+          </g>
+          <g class="art-layer art-layer--two">
+            <path class="art-draw" pathLength="1" d="M427 96v914M-30 488h915M49 787l736-482M45 309l747 482"/>
+            <path class="art-draw art-draw--late" pathLength="1" d="M1042 167h620v506h-620zM1042 420h620M1352 167v506"/>
+          </g>
+        </svg>
+      </div>
+      <div class="container balance__grid">
+        <div class="balance__copy reveal">
+          <p class="eyebrow">Пространство для движения</p>
+          <h2 id="balance-title">Тело помнит,<br><em>как быть лёгким</em></h2>
+          <p>Мягкая йога, практики с поющими чашами, танцевальный фитнес и персональные занятия проходят в светлом зале с видом на лес, а в тёплую погоду — на свежем воздухе.</p>
+          <div class="story-prices">
+            <div><span>Групповое занятие</span><strong>1 500 ₽</strong><small>1 занятие</small></div>
+            <div><span>Персональная тренировка</span><strong>2 900 ₽</strong><small>1 занятие</small></div>
+            <div><span>Абонемент</span><strong>5 400 ₽</strong><small>4 занятия</small></div>
+          </div>
+          <a class="text-link story-cta" href="https://dikidi.net/1905232" target="_blank" rel="noopener">Выбрать занятие <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="balance__image reveal reveal--delay-1">
+          <img src="assets/images/yoga-hall.webp" alt="Панорамный зал для йоги и фитнеса с видом на лес" width="1600" height="1000" loading="lazy">
+          <div class="balance__note" aria-hidden="true"><strong>дыхание</strong><span>ритм · свобода</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cosmetology section tone-section story-section" id="cosmetology" data-image-side="right" data-motion-lines aria-labelledby="cosmetology-title">
+      <div class="line-art line-art--care" aria-hidden="true">
+        <svg viewBox="0 0 1600 1000" preserveAspectRatio="none">
+          <g class="art-layer art-layer--one">
+            <path class="art-draw" pathLength="1" d="M1372-74c-169 172-234 362-134 539 54 95 162 143 155 263-6 101-90 183-211 249"/>
+            <path class="art-draw art-draw--late" pathLength="1" d="M1312 134c-98 87-93 174-19 227 47 34 44 82-16 132-59 50-70 113-26 189"/>
+          </g>
+          <g class="art-layer art-layer--two">
+            <ellipse class="art-draw" pathLength="1" cx="221" cy="758" rx="326" ry="199"/>
+            <ellipse class="art-draw art-draw--late" pathLength="1" cx="221" cy="758" rx="209" ry="121"/>
+            <path class="art-draw art-draw--late" pathLength="1" d="M-90 758h622M221 520v470"/>
+          </g>
+        </svg>
+      </div>
+      <div class="container cosmetology__grid">
+        <div class="cosmetology__copy reveal">
+          <p class="eyebrow">Сияние начинается с заботы</p>
+          <h2 id="cosmetology-title">Косметология,<br><em>бережная к коже</em></h2>
+          <p class="cosmetology__lead">Не универсальная схема, а внимательный разговор с вами и вашей кожей. Косметолог-эстетист подберёт уход, который даст заметный результат и останется комфортным.</p>
+          <ul class="cosmetology__list">
+            <li><span>01</span><div><strong>Персональная консультация</strong><p>Знакомство, диагностика и понятный план ухода.</p></div></li>
+            <li><span>02</span><div><strong>Уходовые процедуры</strong><p>Очищение, обновление, увлажнение и лифтинг.</p></div></li>
+            <li><span>03</span><div><strong>Аппаратный LPG-массаж</strong><p>Курс для тонуса, лёгкости и уверенности в теле.</p></div></li>
+          </ul>
+          <div class="story-prices">
+            <div><span>Комплексная чистка</span><strong>3 500 ₽</strong><small>80 минут</small></div>
+            <div><span>Уход «Сияние»</span><strong>2 500 ₽</strong><small>50 минут</small></div>
+            <div><span>Скульптурный лифтинг</span><strong>4 500 ₽</strong><small>60 минут</small></div>
+          </div>
+          <a class="text-link story-cta" href="https://dikidi.net/1905232" target="_blank" rel="noopener">Выбрать уход <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="cosmetology__visual reveal reveal--delay-1">
+          <img src="assets/images/lpg.webp" alt="Светлый кабинет LPG-массажа в Ле Бурже" width="1200" height="1500" loading="lazy">
+          <div class="cosmetology__label" aria-hidden="true"><span>бережно</span><strong>к себе</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="films section tone-section" data-motion-lines aria-labelledby="films-title">
+      <div class="section-sketch section-sketch--films" aria-hidden="true">
+        <svg viewBox="0 0 1600 800" preserveAspectRatio="none">
+          <path class="art-draw" pathLength="1" d="M46 151l213 105 202-163 216 132 221-103 183 142 243-164 230 99"/>
+          <circle class="art-node" cx="259" cy="256" r="13"/><circle class="art-node" cx="461" cy="93" r="8"/><circle class="art-node" cx="898" cy="122" r="15"/><circle class="art-node" cx="1324" cy="100" r="9"/>
+          <path class="art-draw art-draw--late" pathLength="1" d="M-80 720h345v-95h244v95h322v-142h265v142h578"/>
+        </svg>
+      </div>
+      <div class="container">
+        <div class="films__head reveal">
+          <p class="eyebrow">Почувствуйте атмосферу</p>
+          <h2 id="films-title">Один день в<br><em>Ле&nbsp;Бурже</em></h2>
+          <p>Нажмите play — и на несколько минут окажитесь внутри.</p>
+        </div>
+        <div class="film-grid">
+          <article class="film-card reveal">
+            <div class="film-card__media"><video controls playsinline preload="none" poster="assets/images/lebourget-video-1-poster.webp" data-lazy-video data-src="assets/video/lebourget-1.mp4"></video></div>
+            <div class="film-card__caption"><span>01</span><h3>Внутри Ле Бурже</h3></div>
+          </article>
+          <article class="film-card reveal reveal--delay-1">
+            <div class="film-card__media"><video controls playsinline preload="none" poster="assets/images/pool-kids.webp" data-lazy-video data-src="assets/video/lebourget-2.mp4"></video></div>
+            <div class="film-card__caption"><span>02</span><h3>Моменты и события</h3></div>
+          </article>
+          <article class="film-card reveal reveal--delay-2">
+            <div class="film-card__media"><video controls playsinline preload="none" poster="assets/images/pool-video-poster.webp" data-lazy-video data-src="assets/video/lebourget-3.mp4"></video></div>
+            <div class="film-card__caption"><span>03</span><h3>Плавание и движение</h3></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="offers section tone-section" id="offers" data-motion-lines aria-labelledby="offers-title">
+      <div class="section-sketch section-sketch--offers" aria-hidden="true">
+        <svg viewBox="0 0 1600 1050" preserveAspectRatio="none">
+          <ellipse class="art-draw" pathLength="1" cx="1378" cy="179" rx="268" ry="154"/>
+          <path class="art-draw art-draw--late" pathLength="1" d="M-60 370c255-106 448-79 597 21s324 126 526 12"/>
+        </svg>
+      </div>
+      <div class="container">
+        <div class="offers__head reveal">
+          <p class="eyebrow">Повод позаботиться о себе</p>
+          <h2 id="offers-title">Сейчас особенно <em>приятно</em></h2>
+          <p>Специальные предложения Ле Бурже — для спонтанного вечера, воскресного отдыха и регулярной заботы о себе.</p>
+        </div>
+
+        <div class="offer-grid">
+          <article class="offer-card offer-card--feature reveal" data-motion-lines>
+            <span class="offer-card__badge">−50%</span>
+            <p class="eyebrow">По воскресеньям</p>
+            <h3>Счастливое воскресенье</h3>
+            <p>Скидка 50% на посещение аквазоны в течение всего дня.</p>
+            <div class="offer-card__prices">
+              <div class="offer-card__price"><strong>2 000 ₽</strong><span>взрослый</span></div>
+              <div class="offer-card__price"><strong>1 500 ₽</strong><span>детский</span></div>
+            </div>
+            <a href="https://dikidi.net/1905232" target="_blank" rel="noopener">Выбрать время <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="offer-card offer-card--blue reveal reveal--delay-1" data-motion-lines>
+            <span class="offer-card__number">01</span>
+            <p class="eyebrow">Будни · 20:00–22:00</p>
+            <h3>Счастливые часы</h3>
+            <p>Два часа в аквазоне: 2 000 ₽ для взрослого и 1 500 ₽ для ребёнка.</p>
+          </article>
+
+          <article class="offer-card offer-card--peach reveal" data-motion-lines>
+            <span class="offer-card__number">02</span>
+            <p class="eyebrow">Массаж + вода</p>
+            <h3>Продлите удовольствие</h3>
+            <p>При бронировании любого массажа — скидка 50% на посещение аквазоны.</p>
+          </article>
+
+          <article class="offer-card offer-card--green reveal reveal--delay-1" data-motion-lines>
+            <span class="offer-card__number">03</span>
+            <p class="eyebrow">Курс LPG</p>
+            <h3>10 + 10</h3>
+            <p>При покупке курса из 10 LPG-процедур — 10 посещений аквазоны по одному часу в подарок.</p>
+          </article>
+
+          <article class="offer-card offer-card--sand reveal" data-motion-lines>
+            <span class="offer-card__number">04</span>
+            <p class="eyebrow">Ваш день</p>
+            <h3>−10% в день рождения</h3>
+            <p>Персональная скидка 10% на все услуги комплекса.</p>
+          </article>
+
+          <article class="offer-card offer-card--rose reveal reveal--delay-1" data-motion-lines>
+            <span class="offer-card__number">05</span>
+            <p class="eyebrow">Знакомство с косметологом</p>
+            <h3>Продолжение со скидкой</h3>
+            <p>После консультации косметолога Светланы — скидка 10% на следующую процедуру.</p>
+          </article>
+        </div>
+        <p class="offers__note">Подробности, сроки действия и условия предложений уточняйте у администратора.</p>
+      </div>
+    </section>
+
+    <section class="prices section tone-section" id="prices" data-motion-lines aria-labelledby="prices-title">
+      <div class="section-sketch section-sketch--prices" aria-hidden="true">
+        <svg viewBox="0 0 1600 900" preserveAspectRatio="none">
+          <path class="art-draw" pathLength="1" d="M1174-60v332h338V-60M1174 106h338M1343-60v332"/>
+          <path class="art-draw art-draw--late" pathLength="1" d="M-70 804c133-179 323-219 493-113 169 105 361 95 518-28"/>
+        </svg>
+      </div>
+      <div class="container">
+        <div class="prices__head reveal">
+          <div>
+            <p class="eyebrow">Выберите своё</p>
+            <h2 id="prices-title">Услуги и цены</h2>
+          </div>
+          <p>Показываем популярные процедуры. Полный актуальный прайс и свободное время доступны в онлайн-записи.</p>
+        </div>
+
+        <div class="price-tabs reveal" role="tablist" aria-label="Категории услуг">
+          <button type="button" role="tab" aria-selected="true" aria-controls="panel-massage" id="tab-massage" data-price-tab="massage">Массажи</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="panel-spa" id="tab-spa" data-price-tab="spa">SPA-ритуалы</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="panel-face" id="tab-face" data-price-tab="face">Косметология</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="panel-fitness" id="tab-fitness" data-price-tab="fitness">Йога и фитнес</button>
+        </div>
+
+        <div class="price-panels reveal reveal--delay-1">
+          <div class="price-panel is-active" id="panel-massage" role="tabpanel" aria-labelledby="tab-massage" data-price-panel="massage">
+            <div class="price-row"><div><h3>Классический массаж</h3><p>Мягкое восстановление и глубокое расслабление</p></div><span>60 мин</span><strong>3 500 ₽</strong></div>
+            <div class="price-row"><div><h3>Общий массаж</h3><p>Проработка всего тела от стоп до плеч</p></div><span>90 мин</span><strong>5 200 ₽</strong></div>
+            <div class="price-row"><div><h3>Массаж спины</h3><p>Шейно-воротниковая зона, лопатки и поясница</p></div><span>40 мин</span><strong>2 300 ₽</strong></div>
+            <div class="price-row"><div><h3>Твин-массаж</h3><p>Синхронный ритуал для двоих в одном кабинете</p></div><span>60 мин</span><strong>7 500 ₽</strong></div>
+          </div>
+
+          <div class="price-panel" id="panel-spa" role="tabpanel" aria-labelledby="tab-spa" data-price-panel="spa" hidden>
+            <div class="price-row"><div><h3>SPA-массаж по свече</h3><p>Тёплое ароматное масло и мягкие техники</p></div><span>90 мин</span><strong>6 400 ₽</strong></div>
+            <div class="price-row"><div><h3>Стоун-массаж</h3><p>Ритуал с горячими вулканическими камнями</p></div><span>60 мин</span><strong>4 100 ₽</strong></div>
+            <div class="price-row"><div><h3>Турецкий уход</h3><p>Аквазона, очищение кессе и пенный массаж</p></div><span>90 мин</span><strong>5 700 ₽</strong></div>
+            <div class="price-row"><div><h3>SPA-уход по телу</h3><p>Скрабирование, обёртывание и массаж</p></div><span>120 мин</span><strong>7 500 ₽</strong></div>
+          </div>
+
+          <div class="price-panel" id="panel-face" role="tabpanel" aria-labelledby="tab-face" data-price-panel="face" hidden>
+            <div class="price-row"><div><h3>Комплексная чистка лица</h3><p>Ультразвуковое и механическое очищение</p></div><span>80 мин</span><strong>3 500 ₽</strong></div>
+            <div class="price-row"><div><h3>Пилинг лица</h3><p>Индивидуально подобранное мягкое обновление</p></div><span>50 мин</span><strong>3 000 ₽</strong></div>
+            <div class="price-row"><div><h3>Уход «Сияние»</h3><p>Детокс-маска, пластический массаж и пилинг</p></div><span>50 мин</span><strong>2 500 ₽</strong></div>
+            <div class="price-row"><div><h3>Скульптурный лифтинг</h3><p>Классический и буккальный массаж лица</p></div><span>60 мин</span><strong>4 500 ₽</strong></div>
+          </div>
+
+          <div class="price-panel" id="panel-fitness" role="tabpanel" aria-labelledby="tab-fitness" data-price-panel="fitness" hidden>
+            <div class="price-row"><div><h3>Групповая тренировка</h3><p>Танцевальный фитнес или мягкая йога</p></div><span>1 занятие</span><strong>1 500 ₽</strong></div>
+            <div class="price-row"><div><h3>Персональная тренировка</h3><p>Индивидуальный темп и программа</p></div><span>1 занятие</span><strong>2 900 ₽</strong></div>
+            <div class="price-row"><div><h3>Абонемент на 4 занятия</h3><p>Групповые занятия в течение месяца</p></div><span>4 занятия</span><strong>5 400 ₽</strong></div>
+            <div class="price-row"><div><h3>Абонемент на 8 занятий</h3><p>Групповые занятия в течение месяца</p></div><span>8 занятий</span><strong>10 200 ₽</strong></div>
+          </div>
+        </div>
+
+        <div class="prices__footer reveal">
+          <span>Не нашли нужную процедуру?</span>
+          <a class="button button--dark" href="https://dikidi.net/1905232" target="_blank" rel="noopener">Открыть полный прайс <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta section tone-section" aria-labelledby="final-title">
+      <div class="container">
+        <div class="final-cta__card reveal" data-motion-lines>
+          <div class="final-cta__orb final-cta__orb--one" aria-hidden="true"></div>
+          <div class="final-cta__orb final-cta__orb--two" aria-hidden="true"></div>
+          <div class="final-cta__orbit final-cta__orbit--one" aria-hidden="true"></div>
+          <div class="final-cta__orbit final-cta__orbit--two" aria-hidden="true"></div>
+          <p class="eyebrow">Вы уже достаточно сделали сегодня</p>
+          <h2 id="final-title">Теперь — время<br><em>для себя</em></h2>
+          <p>Выберите процедуру онлайн или позвоните — администратор поможет собрать ваш идеальный сценарий отдыха.</p>
+          <div class="final-cta__actions">
+            <a class="button button--dark" href="https://dikidi.net/1905232" target="_blank" rel="noopener">Оставить заявку <span aria-hidden="true">↗</span></a>
+            <a class="final-cta__phone" href="tel:+79114522727">+7 911 452 27 27</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacts section tone-section" id="contacts" data-motion-lines aria-labelledby="contacts-title">
+      <div class="section-sketch section-sketch--contacts" aria-hidden="true">
+        <svg viewBox="0 0 1600 700" preserveAspectRatio="none">
+          <path class="art-draw" pathLength="1" d="M-45 581c161-214 340-180 471-324 121-133 249-114 328 17 82 135 213 142 311 28 103-120 209-115 314 16 75 93 164 111 268 72"/>
+          <circle class="art-node" cx="426" cy="257" r="18"/><circle class="art-node" cx="1065" cy="302" r="12"/>
+          <path class="art-draw art-draw--late" pathLength="1" d="M1341 72v178h189V72M1383 72V21h105v51"/>
+        </svg>
+      </div>
+      <div class="container contacts__grid">
+        <div class="contacts__copy reveal">
+          <p class="eyebrow">Мы рядом</p>
+          <h2 id="contacts-title">Найдите время.<br><em>Мы найдём всё остальное.</em></h2>
+          <address>
+            <div><span>Адрес</span><a href="https://yandex.ru/maps/org/leburzhe/168966016690?si=41dkwruff18n874tfc3wa78nyg" target="_blank" rel="noopener">Калининград, ул. Верхние Поля, 12Б</a></div>
+            <div><span>Телефон</span><a href="tel:+79114522727">+7 911 452 27 27</a></div>
+            <div><span>Онлайн-запись</span><a href="https://dikidi.net/1905232" target="_blank" rel="noopener">Выбрать услугу и время ↗</a></div>
+          </address>
+          <div class="socials" aria-label="Социальные сети">
+            <a href="https://t.me/lebourget_39" target="_blank" rel="noopener" aria-label="Telegram">TG</a>
+            <a href="https://www.instagram.com/le.bourget39?igsh=N3QzdHE3YWVhaWx5&amp;utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+            <a href="https://vk.ru/lebourget_39" target="_blank" rel="noopener" aria-label="ВКонтакте">VK</a>
+          </div>
+        </div>
+        <div class="contacts__map reveal reveal--delay-1">
+          <iframe src="https://yandex.ru/map-widget/v1/?ll=20.549140%2C54.747692&amp;mode=search&amp;oid=168966016690&amp;ol=biz&amp;z=16" title="Ле Бурже на Яндекс Картах" loading="lazy" allowfullscreen></iframe>
+          <a href="https://yandex.ru/maps/org/leburzhe/168966016690?si=41dkwruff18n874tfc3wa78nyg" target="_blank" rel="noopener">Построить маршрут <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <a class="brand brand--footer" href="#top">
+        <img class="brand__logo" src="assets/images/lebourget-logo-transparent.webp" alt="Ле Бурже" width="1200" height="400">
+        <span class="brand__caption">искусство полноценного отдыха</span>
+      </a>
+      <p>Акватермальный SPA-комплекс<br>в Калининграде</p>
+      <div class="site-footer__links">
+        <a href="#directions">Направления</a>
+        <a href="#offers">Акции</a>
+        <a href="#prices">Цены</a>
+        <a href="#contacts">Контакты</a>
+      </div>
+      <p class="site-footer__legal">© <span data-year></span> Ле Бурже<br>Информация на сайте не является публичной офертой.</p>
+    </div>
+  </footer>
+
+  <a class="mobile-book" href="https://dikidi.net/1905232" target="_blank" rel="noopener">Записаться онлайн <span aria-hidden="true">↗</span></a>
+</body>
+</html>
