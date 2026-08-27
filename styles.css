@@ -1166,6 +1166,12 @@ button:focus-visible {
   background: #f2eee7;
 }
 
+.care-pair--memberships.tone-section {
+  --section-tone: #3b302b;
+  color: var(--white);
+  background: #3b302b;
+}
+
 .care-pair--final.tone-section {
   --section-tone: var(--white);
   background: var(--white);
@@ -1184,7 +1190,7 @@ button:focus-visible {
 }
 
 .memberships {
-  color: #35473e;
+  color: var(--white);
   background: transparent;
   overflow: hidden;
 }
@@ -1199,7 +1205,7 @@ button:focus-visible {
   min-height: min(760px, calc(100vh - 120px));
   padding: clamp(58px, 5.4vw, 92px);
   border-radius: var(--radius-xl);
-  background: #e7e1d6;
+  background: #493a34;
   overflow: hidden;
 }
 
@@ -1216,7 +1222,7 @@ button:focus-visible {
 }
 
 .memberships__copy h2 em {
-  color: var(--sage-deep);
+  color: var(--peach);
 }
 
 .memberships__details {
@@ -1226,12 +1232,23 @@ button:focus-visible {
 
 .memberships__details p {
   margin-bottom: 30px;
-  color: rgba(53, 71, 62, .78);
+  color: rgba(255, 255, 255, .72);
   font-size: clamp(18px, 1.35vw, 23px);
 }
 
 .memberships__details .button {
   margin-right: 18px;
+  color: var(--ink);
+  background: var(--peach);
+}
+
+.memberships__details .button:hover {
+  color: var(--ink);
+  background: #f3c3ae;
+}
+
+.memberships__phone {
+  color: rgba(255, 255, 255, .9);
 }
 
 .memberships__rings {
@@ -1243,7 +1260,7 @@ button:focus-visible {
 
 .memberships__rings span {
   position: absolute;
-  border: var(--art-stroke) solid rgba(83, 100, 75, .24);
+  border: var(--art-stroke) solid rgba(238, 173, 145, .24);
   will-change: transform;
 }
 
@@ -2497,7 +2514,7 @@ button:focus-visible {
 .directions { --section-tone: var(--cream); }
 .aquazone { --section-tone: #b9dce4; }
 .swimming { --section-tone: #e3efeb; }
-.memberships { --section-tone: #f2eee7; }
+.memberships { --section-tone: #3b302b; }
 .spa-story { --section-tone: #efb99f; }
 .balance { --section-tone: var(--sage-deep); }
 .cosmetology { --section-tone: #efd1c7; }
