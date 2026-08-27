@@ -6,16 +6,18 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
 const motionLines = [...document.querySelectorAll('[data-motion-lines]')];
 let lastScrollY = Math.max(window.scrollY, 0);
 let scrollFrameRequested = false;
+let anchorScrollLockUntil = 0;
 
 const updateHeader = () => {
   const currentScrollY = Math.max(window.scrollY, 0);
   const scrollDelta = currentScrollY - lastScrollY;
   const menuIsOpen = document.body.classList.contains('nav-open');
+  const anchorScrollIsLocked = performance.now() < anchorScrollLockUntil;
 
   header?.classList.toggle('is-scrolled', currentScrollY > 24);
   mobileBook?.classList.toggle('is-visible', currentScrollY > 500);
 
-  if (menuIsOpen || currentScrollY < 96 || scrollDelta < -2) {
+  if (menuIsOpen || anchorScrollIsLocked || currentScrollY < 96 || scrollDelta < -2) {
     header?.classList.remove('is-hidden');
   } else if (currentScrollY > 150 && scrollDelta > 2) {
     header?.classList.add('is-hidden');
@@ -38,15 +40,19 @@ const updateMotionLines = () => {
   }
 
   const viewportHeight = window.innerHeight;
+  const clamp01 = (value) => Math.max(0, Math.min(1, value));
 
   motionLines.forEach((item, index) => {
     const bounds = item.getBoundingClientRect();
-    if (bounds.bottom < -200 || bounds.top > viewportHeight + 200) return;
-
-    const progress = Math.max(0, Math.min(1, (viewportHeight - bounds.top) / (viewportHeight + bounds.height)));
+    const visibleTravel = Math.max(viewportHeight + bounds.height, 1);
+    const progress = clamp01((viewportHeight - bounds.top) / visibleTravel);
+    const isDirectionFrames = item.classList.contains('directions');
+    const directionFrameTravel = Math.max(viewportHeight * .9, 1);
+    const drawProgress = isDirectionFrames
+      ? clamp01((viewportHeight - bounds.top) / directionFrameTravel)
+      : clamp01(progress * 1.035 + .005);
+    const lateDrawProgress = clamp01((drawProgress - .1) / .9);
     const centeredProgress = Math.max(-.65, Math.min(.65, progress - .5));
-    const drawProgress = Math.max(0, Math.min(1, progress * 1.45));
-    const lateDrawProgress = Math.max(0, Math.min(1, (progress - .18) * 1.55));
     const direction = index % 2 === 0 ? 1 : -1;
     const verticalDirection = index % 3 === 0 ? -1 : 1;
     const shift = centeredProgress * 34 * direction;
@@ -106,11 +112,76 @@ nav?.querySelectorAll('a').forEach((link) => {
   });
 });
 
+const getAnchorHeaderHeight = () => {
+  const value = getComputedStyle(document.documentElement).getPropertyValue('--anchor-header-height');
+  return Number.parseFloat(value) || header?.getBoundingClientRect().height || 0;
+};
+
+const getAnchorTarget = (hash) => {
+  if (!hash || hash === '#') return null;
+  try {
+    return document.getElementById(decodeURIComponent(hash.slice(1)));
+  } catch {
+    return null;
+  }
+};
+
+const scrollToSection = (hash, behavior = reduceMotion ? 'auto' : 'smooth') => {
+  const target = getAnchorTarget(hash);
+  if (!target) return false;
+
+  const isTop = target.id === 'top';
+  anchorScrollLockUntil = performance.now() + (behavior === 'smooth' ? 2000 : 600);
+  header?.classList.remove('is-hidden');
+  header?.classList.toggle('is-scrolled', !isTop);
+
+  const targetTop = target.getBoundingClientRect().top + window.scrollY;
+  const top = isTop ? 0 : targetTop - getAnchorHeaderHeight();
+  window.scrollTo({ top: Math.max(0, top), behavior: behavior === 'auto' ? 'instant' : behavior });
+
+  window.setTimeout(() => {
+    header?.classList.remove('is-hidden');
+    lastScrollY = Math.max(window.scrollY, 0);
+  }, behavior === 'smooth' ? 1700 : 0);
+
+  return true;
+};
+
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    const hash = link.getAttribute('href');
+    if (!getAnchorTarget(hash)) return;
+
+    event.preventDefault();
+    document.body.classList.remove('nav-open');
+    menuToggle?.setAttribute('aria-expanded', 'false');
+    menuToggle?.setAttribute('aria-label', 'Открыть меню');
+
+    if (window.location.hash === hash) {
+      window.history.replaceState(null, '', hash);
+    } else {
+      window.history.pushState(null, '', hash);
+    }
+    scrollToSection(hash);
+  });
+});
+
+if (window.location.hash && getAnchorTarget(window.location.hash)) {
+  window.addEventListener('load', () => {
+    window.requestAnimationFrame(() => scrollToSection(window.location.hash, 'auto'));
+  }, { once: true });
+}
+
+window.addEventListener('hashchange', () => {
+  if (getAnchorTarget(window.location.hash)) scrollToSection(window.location.hash);
+});
+
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && document.body.classList.contains('nav-open')) {
     document.body.classList.remove('nav-open');
     header?.classList.remove('is-hidden');
     menuToggle?.setAttribute('aria-expanded', 'false');
+    menuToggle?.setAttribute('aria-label', 'Открыть меню');
     menuToggle?.focus();
   }
 });
@@ -220,7 +291,7 @@ if ('IntersectionObserver' in window) {
   lazyVideos.forEach(attachVideoSource);
 }
 
-const mobileBookBlockers = [...document.querySelectorAll('.story-section, .offers, .prices, .final-cta, .contacts')];
+const mobileBookBlockers = [...document.querySelectorAll('.story-section, .swimming, .memberships, .offers, .prices, .final-cta, .contacts')];
 
 if (mobileBook && mobileBookBlockers.length && 'IntersectionObserver' in window) {
   const visibleBlockers = new Set();

@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ле Бурже — акватермальный SPA-комплекс в Калининграде. Бассейн, хаммам, массаж, косметология, йога и фитнес.">
+  <meta name="description" content="Ле Бурже — акватермальный SPA-комплекс в Калининграде. Аквазона, плавание, абонементы, массаж, косметология, йога и фитнес.">
   <meta name="theme-color" content="#f3e1d3">
   <meta property="og:title" content="Ле Бурже — искусство полноценного отдыха">
-  <meta property="og:description" content="Акватермальный SPA-комплекс в Калининграде: бассейн, массаж, косметология и практики восстановления.">
+  <meta property="og:description" content="Акватермальный SPA-комплекс в Калининграде: аквазона, плавание, абонементы, массаж, косметология и практики восстановления.">
   <meta property="og:image" content="assets/images/hero-pool.jpg">
   <title>Ле Бурже — акватермальный SPA-комплекс</title>
+  <link rel="icon" href="assets/images/lebourget-logo-transparent.webp" type="image/webp">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
@@ -22,6 +23,7 @@
     <nav class="main-nav" id="main-nav" aria-label="Основная навигация" data-nav>
       <a href="#about">О комплексе</a>
       <a href="#directions">Направления</a>
+      <a href="#memberships">Абонементы</a>
       <a href="#offers">Акции</a>
       <a href="#prices">Цены</a>
       <a href="#contacts">Контакты</a>
@@ -59,14 +61,6 @@
         </div>
       </div>
 
-      <aside class="hero-card hero-card--top" aria-label="Время для отдыха">
-        <span class="hero-card__number">2,5</span>
-        <span class="hero-card__text">часа гостевого<br>визита в аквазону</span>
-      </aside>
-      <aside class="hero-card hero-card--bottom" aria-label="Что входит в аквазону">
-        <span class="hero-card__text">Бассейны · хаммам<br>травяная сауна</span>
-      </aside>
-
     </section>
 
     <div class="ribbon" aria-hidden="true">
@@ -80,7 +74,7 @@
       <div class="section-sketch section-sketch--intro" aria-hidden="true">
         <svg viewBox="0 0 1600 900" preserveAspectRatio="none">
           <path class="art-draw" pathLength="1" d="M-80 164c274 78 414-135 646-42 171 69 242 250 426 195 127-38 203-170 319-128 99 36 128 163 368 94"/>
-          <path class="art-draw art-draw--late" pathLength="1" d="M61 779c276-166 515-84 654 51 147 142 315 91 438-31"/>
+          <path class="art-draw art-draw--late" pathLength="1" d="M-120 808c287-181 530-105 682 30 151 135 333 121 515-17s381-166 699-72"/>
         </svg>
       </div>
       <div class="container intro__grid">
@@ -111,9 +105,11 @@
 
     <section class="directions section tone-section" id="directions" data-motion-lines aria-labelledby="directions-title">
       <div class="section-sketch section-sketch--directions" aria-hidden="true">
-        <svg viewBox="0 0 1600 1100" preserveAspectRatio="none">
-          <path class="art-draw" pathLength="1" d="M102 254V116h206v138M356 254V78h278v176M682 254V138h186v116M916 254V48h348v206M1312 254V105h183v149"/>
-          <path class="art-draw art-draw--late" pathLength="1" d="M56 965c293-77 443 58 678-18 237-76 413-31 827 29"/>
+        <svg viewBox="0 0 1600 460" preserveAspectRatio="none">
+          <rect class="art-frame art-draw" pathLength="1" x="38" y="126" width="218" height="270"/>
+          <rect class="art-frame art-draw art-draw--late" pathLength="1" x="312" y="34" width="356" height="234"/>
+          <rect class="art-frame art-draw" pathLength="1" x="724" y="244" width="322" height="178"/>
+          <rect class="art-frame art-draw art-draw--late" pathLength="1" x="1194" y="-24" width="340" height="324"/>
         </svg>
       </div>
       <div class="container">
@@ -124,7 +120,7 @@
         </div>
 
         <div class="direction-grid">
-          <article class="direction-card direction-card--blue reveal" data-motion-lines>
+          <a class="direction-card direction-card--blue reveal" href="#aquazone" aria-label="Перейти к разделу «Аквазона»">
             <div class="direction-card__image">
               <img src="assets/images/pool-main.webp" alt="Большой бассейн аквазоны" width="1200" height="1500" loading="lazy">
               <span class="direction-card__index">01</span>
@@ -132,12 +128,12 @@
             <div class="direction-card__body">
               <p class="eyebrow">Лёгкость</p>
               <h3>Аквазона</h3>
-              <p>Большой плавательный бассейн с гидромассажем, детский бассейн, хаммам и травяная сауна.</p>
-              <a href="#aquazone">Подробнее <span aria-hidden="true">→</span></a>
+              <p>Большой плавательный бассейн с гидромассажем, малый бассейн, хаммам и травяная сауна.</p>
+              <span class="direction-card__link">Подробнее <span aria-hidden="true">→</span></span>
             </div>
-          </article>
+          </a>
 
-          <article class="direction-card direction-card--peach reveal reveal--delay-1" data-motion-lines>
+          <a class="direction-card direction-card--peach reveal reveal--delay-1" href="#spa" aria-label="Перейти к разделу «SPA и массаж»">
             <div class="direction-card__image">
               <img src="assets/images/spa-overview.webp" alt="Тёплый массажный кабинет Ле Бурже" width="1800" height="1350" loading="lazy">
               <span class="direction-card__index">02</span>
@@ -146,11 +142,11 @@
               <p class="eyebrow">Прикосновение</p>
               <h3>SPA и массаж</h3>
               <p>Классические и тёплые массажи, ритуалы для тела, турецкий уход и процедуры для двоих.</p>
-              <a href="#spa">Подробнее <span aria-hidden="true">→</span></a>
+              <span class="direction-card__link">Подробнее <span aria-hidden="true">→</span></span>
             </div>
-          </article>
+          </a>
 
-          <article class="direction-card direction-card--sand reveal" data-motion-lines>
+          <a class="direction-card direction-card--sand reveal" href="#balance" aria-label="Перейти к разделу «Йога и фитнес»">
             <div class="direction-card__image">
               <img src="assets/images/yoga-outdoor.webp" alt="Практика восстановления на зелёной территории Ле Бурже" width="1350" height="1800" loading="lazy">
               <span class="direction-card__index">03</span>
@@ -159,11 +155,11 @@
               <p class="eyebrow">Движение</p>
               <h3>Йога и фитнес</h3>
               <p>Зал с панорамными окнами и видом на лес: йога, мягкие практики, фитнес и медитации.</p>
-              <a href="#balance">Почувствовать ритм <span aria-hidden="true">→</span></a>
+              <span class="direction-card__link">Почувствовать ритм <span aria-hidden="true">→</span></span>
             </div>
-          </article>
+          </a>
 
-          <article class="direction-card direction-card--rose reveal reveal--delay-1" data-motion-lines>
+          <a class="direction-card direction-card--rose reveal reveal--delay-1" href="#cosmetology" aria-label="Перейти к разделу «Косметология»">
             <div class="direction-card__image">
               <img src="assets/images/cosmetology-overview.webp" alt="Светлый кабинет косметологии Ле Бурже" width="1800" height="1350" loading="lazy">
               <span class="direction-card__index">04</span>
@@ -172,9 +168,9 @@
               <p class="eyebrow">Сияние</p>
               <h3>Косметология</h3>
               <p>Уходовые процедуры, LPG-массаж и персональные консультации косметолога-эстетиста.</p>
-              <a href="#cosmetology">Подробнее <span aria-hidden="true">→</span></a>
+              <span class="direction-card__link">Подробнее <span aria-hidden="true">→</span></span>
             </div>
-          </article>
+          </a>
         </div>
       </div>
     </section>
@@ -197,38 +193,79 @@
       <div class="container aquazone__grid">
         <div class="aquazone__visual reveal">
           <img src="assets/images/hero-pool.webp" alt="Панорамный вид большого бассейна Ле Бурже" width="1100" height="1600" loading="lazy">
-          <div class="aquazone__stamp">33°<span>детский<br>бассейн</span></div>
+          <div class="aquazone__stamp"><strong>29°</strong><span>температура воды</span></div>
         </div>
         <div class="aquazone__copy reveal reveal--delay-1">
           <p class="eyebrow">Вода меняет ритм</p>
           <h2 id="aquazone-title">Аквазона для <em>полной перезагрузки</em></h2>
           <p class="aquazone__lead">Свет, вода и тишина соединяются здесь в одно ощущение: можно никуда не спешить.</p>
-          <ul class="feature-list">
-            <li><span>01</span> Большой плавательный бассейн и гидромассаж</li>
-            <li><span>02</span> Детский бассейн с комфортной температурой</li>
-            <li><span>03</span> Турецкий хаммам и травяная сауна</li>
-            <li><span>04</span> Летняя терраса с шезлонгами у леса</li>
-          </ul>
-          <div class="price-chips story-prices">
-            <div><span>Взрослый</span><strong>4 000 ₽</strong><small>до 2,5 часов</small></div>
-            <div><span>Ребёнок</span><strong>3 000 ₽</strong><small>до 2,5 часов</small></div>
-            <div><span>Семейный</span><strong>5 000 ₽</strong><small>1 взрослый + 1 ребёнок</small></div>
+          <div class="aquazone__facts" aria-label="Характеристики большого бассейна">
+            <div><strong>25 м</strong><span>длина бассейна</span></div>
+            <div><strong>4</strong><span>дорожки</span></div>
+            <div><strong>1,10–2,5 м</strong><span>глубина</span></div>
           </div>
-          <a class="text-link story-cta" href="https://dikidi.net/1905232" target="_blank" rel="noopener">Запланировать визит <span aria-hidden="true">↗</span></a>
+          <ul class="feature-list">
+            <li><span>01</span><div><strong>Большой плавательный бассейн и гидромассаж</strong><p>25 метров, четыре дорожки и отдельная зона гидромассажа.</p></div></li>
+            <li><span>02</span><div><strong>Малый бассейн с комфортной температурой</strong><p>Спокойный формат воды для отдыха и мягкого восстановления.</p></div></li>
+            <li><span>03</span><div><strong>Турецкий хаммам и травяная сауна</strong><p>Тепло, пар и восстановление после воды.</p></div></li>
+            <li><span>04</span><div><strong>Летняя терраса с шезлонгами входит в гостевое посещение</strong><p>Отдых на свежем воздухе в тёплое время года.</p></div></li>
+          </ul>
+          <div class="story-actions">
+            <a class="text-link story-cta" href="https://dikidi.net/1905232" target="_blank" rel="noopener">Посмотреть расписание <span aria-hidden="true">↗</span></a>
+            <a class="text-link story-cta" href="tel:+79114522727">Подобрать формат по телефону <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="swimming section tone-section" id="swimming" data-motion-lines aria-labelledby="swimming-title">
+      <div class="section-sketch section-sketch--swimming" aria-hidden="true">
+        <svg viewBox="0 0 1600 1000" preserveAspectRatio="none">
+          <path class="art-draw" pathLength="1" d="M-120 244C174 72 380 96 592 232s438 165 650 12 352-132 518-28"/>
+          <path class="art-draw art-draw--late" pathLength="1" d="M-170 704c242-174 470-168 650-22 183 148 389 159 612 2s438-185 694-47"/>
+          <path class="art-draw art-draw--late" pathLength="1" d="M452-90c-89 182-52 343 104 421 178 89 263 232 196 420-35 99-19 194 66 294"/>
+        </svg>
+      </div>
+      <div class="container swimming__grid">
+        <div class="swimming__copy reveal">
+          <p class="eyebrow">Самое популярное направление</p>
+          <h2 id="swimming-title">Плавание, которое<br><em>становится привычкой</em></h2>
+          <p class="swimming__lead">От первого знакомства с водой до уверенной техники и регулярных тренировок — для каждого возраста и своего ритма.</p>
+          <div class="swimming__formats">
+            <article><span>01</span><h3>Грудничковое плавание</h3><p>Бережное знакомство с водой вместе с тренером.</p></article>
+            <article><span>02</span><h3>Занятия для детей</h3><p>Персональные и групповые тренировки с вниманием к технике.</p></article>
+            <article><span>03</span><h3>Плавание для взрослых</h3><p>Уверенность в воде, движение и работа над своим результатом.</p></article>
+            <article><span>04</span><h3>Аквааэробика</h3><p>Групповые занятия в воде для энергии и хорошего самочувствия.</p></article>
+            <article><span>05</span><h3>Тренировки и соревнования</h3><p>Регулярная практика, новые цели и события внутри сообщества.</p></article>
+          </div>
+          <div class="swimming__actions">
+            <a class="text-link" href="https://dikidi.net/1905232" target="_blank" rel="noopener">Посмотреть расписание <span aria-hidden="true">↗</span></a>
+            <a class="text-link swimming__phone" href="tel:+79114522727">Подобрать формат по телефону <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="swimming__visual reveal reveal--delay-1">
+          <figure class="swimming__image swimming__image--main">
+            <img src="assets/images/pool-main.webp" alt="Большой бассейн с четырьмя дорожками для занятий плаванием" width="1200" height="1500" loading="lazy">
+          </figure>
+          <figure class="swimming__image swimming__image--small">
+            <img src="assets/images/pool-kids.webp" alt="Малый бассейн аквазоны Ле Бурже" width="1800" height="1200" loading="lazy">
+          </figure>
+          <div class="swimming__note" aria-hidden="true"><strong>вода</strong><span>движение · навык · радость</span></div>
         </div>
       </div>
     </section>
 
     <section class="spa-story section tone-section story-section" id="spa" data-image-side="right" data-motion-lines aria-labelledby="spa-title">
+      <div class="story-wash story-wash--spa" aria-hidden="true"></div>
       <div class="line-art line-art--touch" aria-hidden="true">
         <svg viewBox="0 0 1600 1000" preserveAspectRatio="none">
           <g class="art-layer art-layer--one">
-            <path class="art-draw" pathLength="1" d="M1080-80C900 142 954 415 1174 516c234 107 471-43 512-270"/>
-            <path class="art-draw art-draw--late" pathLength="1" d="M1185-40c-75 164-23 324 132 389 155 66 303-9 367-123"/>
+            <path class="art-draw" pathLength="1" d="M-180 126C126 18 344 40 575 184s459 172 665 5 327-181 538-86"/>
+            <path class="art-draw art-draw--late" pathLength="1" d="M-150 906c243-179 466-151 624-11 143 127 302 133 491 7 194-130 416-147 805-37"/>
           </g>
           <g class="art-layer art-layer--two">
-            <path class="art-draw" pathLength="1" d="M-90 861c224-156 416-168 577-35 121 100 241 113 361 28"/>
-            <path class="art-draw art-draw--late" pathLength="1" d="M208 1012c35-208 149-303 342-286 178 16 280-40 331-168"/>
+            <path class="art-draw" pathLength="1" d="M1288-140c-164 182-153 344 34 443 169 90 253 214 210 390-36 150 31 274 205 439"/>
+            <path class="art-draw art-draw--late" pathLength="1" d="M-130 486c235-105 428-67 548 91 112 148 230 268 410 438"/>
           </g>
         </svg>
       </div>
@@ -250,26 +287,25 @@
             <div><span>03</span><h3>Турецкий уход</h3><p>Хаммам, очищение кессе и воздушный пенный массаж.</p></div>
             <div><span>04</span><h3>Для двоих</h3><p>Время рядом, где всё внимание принадлежит только вам.</p></div>
           </div>
-          <div class="story-prices">
-            <div><span>Классический массаж</span><strong>3 500 ₽</strong><small>60 минут</small></div>
-            <div><span>SPA-массаж по свече</span><strong>6 400 ₽</strong><small>90 минут</small></div>
-            <div><span>Турецкий уход</span><strong>5 700 ₽</strong><small>90 минут</small></div>
+          <div class="story-actions">
+            <a class="text-link story-cta" href="https://dikidi.net/1905232" target="_blank" rel="noopener">Выбрать свой ритуал <span aria-hidden="true">↗</span></a>
+            <a class="text-link story-cta" href="tel:+79114522727">Уточнить по телефону <span aria-hidden="true">→</span></a>
           </div>
-          <a class="text-link story-cta" href="https://dikidi.net/1905232" target="_blank" rel="noopener">Выбрать свой ритуал <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
 
     <section class="balance section tone-section story-section" id="balance" data-image-side="left" data-motion-lines aria-labelledby="balance-title">
+      <div class="story-wash story-wash--balance" aria-hidden="true"></div>
       <div class="line-art line-art--balance" aria-hidden="true">
         <svg viewBox="0 0 1600 1000" preserveAspectRatio="none">
           <g class="art-layer art-layer--one">
-            <path class="art-draw" pathLength="1" d="M-70 1010V405C-70 102 154-70 427-70s497 172 497 475v605"/>
-            <path class="art-draw art-draw--late" pathLength="1" d="M81 1010V424c0-206 151-329 346-329s346 123 346 329v586"/>
+            <path class="art-draw" pathLength="1" d="M-140 736c214-24 338-131 334-286-4-149 112-247 306-259 201-13 353-116 446-325"/>
+            <path class="art-draw art-draw--late" pathLength="1" d="M-150 224c234-150 453-124 620 17 149 127 323 140 521 28s397-121 759 19"/>
           </g>
           <g class="art-layer art-layer--two">
-            <path class="art-draw" pathLength="1" d="M427 96v914M-30 488h915M49 787l736-482M45 309l747 482"/>
-            <path class="art-draw art-draw--late" pathLength="1" d="M1042 167h620v506h-620zM1042 420h620M1352 167v506"/>
+            <path class="art-draw" pathLength="1" d="M1264-150c-175 166-210 337-96 459 101 109 264 113 382 5 103-95 192-103 286-42"/>
+            <path class="art-draw art-draw--late" pathLength="1" d="M-135 974c294-115 518-78 688 58M736 1090c177-258 379-344 566-228 178 111 315 95 466-73"/>
           </g>
         </svg>
       </div>
@@ -278,12 +314,16 @@
           <p class="eyebrow">Пространство для движения</p>
           <h2 id="balance-title">Тело помнит,<br><em>как быть лёгким</em></h2>
           <p>Мягкая йога, практики с поющими чашами, танцевальный фитнес и персональные занятия проходят в светлом зале с видом на лес, а в тёплую погоду — на свежем воздухе.</p>
-          <div class="story-prices">
-            <div><span>Групповое занятие</span><strong>1 500 ₽</strong><small>1 занятие</small></div>
-            <div><span>Персональная тренировка</span><strong>2 900 ₽</strong><small>1 занятие</small></div>
-            <div><span>Абонемент</span><strong>5 400 ₽</strong><small>4 занятия</small></div>
+          <div class="balance__services" aria-label="Форматы занятий йогой">
+            <article><span>01</span><div><h3>Инь-йога</h3><p>Мягкая практика и глубокое расслабление.</p></div></article>
+            <article><span>02</span><div><h3>Поющие чаши</h3><p>Дыхание, звук и восстановление внутреннего ритма.</p></div></article>
+            <article><span>03</span><div><h3>Антистресс-йога</h3><p>Спокойная практика для снятия напряжения.</p></div></article>
+            <article><span>04</span><div><h3>Свой формат</h3><p>Группа, персональная или сплит-тренировка.</p></div></article>
           </div>
-          <a class="text-link story-cta" href="https://dikidi.net/1905232" target="_blank" rel="noopener">Выбрать занятие <span aria-hidden="true">↗</span></a>
+          <div class="story-actions">
+            <a class="text-link story-cta" href="https://dikidi.net/1905232" target="_blank" rel="noopener">Выбрать занятие <span aria-hidden="true">↗</span></a>
+            <a class="text-link story-cta" href="tel:+79114522727">Подобрать формат по телефону <span aria-hidden="true">→</span></a>
+          </div>
         </div>
         <div class="balance__image reveal reveal--delay-1">
           <img src="assets/images/yoga-hall.webp" alt="Панорамный зал для йоги и фитнеса с видом на лес" width="1600" height="1000" loading="lazy">
@@ -293,16 +333,16 @@
     </section>
 
     <section class="cosmetology section tone-section story-section" id="cosmetology" data-image-side="right" data-motion-lines aria-labelledby="cosmetology-title">
+      <div class="story-wash story-wash--cosmetology" aria-hidden="true"></div>
       <div class="line-art line-art--care" aria-hidden="true">
         <svg viewBox="0 0 1600 1000" preserveAspectRatio="none">
           <g class="art-layer art-layer--one">
-            <path class="art-draw" pathLength="1" d="M1372-74c-169 172-234 362-134 539 54 95 162 143 155 263-6 101-90 183-211 249"/>
-            <path class="art-draw art-draw--late" pathLength="1" d="M1312 134c-98 87-93 174-19 227 47 34 44 82-16 132-59 50-70 113-26 189"/>
+            <path class="art-draw" pathLength="1" d="M-170 150C88 23 291 57 451 185c151 121 318 132 507 10s409-122 802 29"/>
+            <path class="art-draw art-draw--late" pathLength="1" d="M-150 838c238-183 453-176 608-26 144 139 300 145 494 5s399-164 812-67"/>
           </g>
           <g class="art-layer art-layer--two">
-            <ellipse class="art-draw" pathLength="1" cx="221" cy="758" rx="326" ry="199"/>
-            <ellipse class="art-draw art-draw--late" pathLength="1" cx="221" cy="758" rx="209" ry="121"/>
-            <path class="art-draw art-draw--late" pathLength="1" d="M-90 758h622M221 520v470"/>
+            <path class="art-draw" pathLength="1" d="M1330-135c-159 188-171 368-38 479 113 95 273 84 376-29 83-91 137-159 202-191"/>
+            <path class="art-draw art-draw--late" pathLength="1" d="M1092 1038c-37-192 24-339 171-422 164-92 326-54 445 103 80 105 129 217 166 363"/>
           </g>
         </svg>
       </div>
@@ -316,15 +356,16 @@
             <li><span>02</span><div><strong>Уходовые процедуры</strong><p>Очищение, обновление, увлажнение и лифтинг.</p></div></li>
             <li><span>03</span><div><strong>Аппаратный LPG-массаж</strong><p>Курс для тонуса, лёгкости и уверенности в теле.</p></div></li>
           </ul>
-          <div class="story-prices">
-            <div><span>Комплексная чистка</span><strong>3 500 ₽</strong><small>80 минут</small></div>
-            <div><span>Уход «Сияние»</span><strong>2 500 ₽</strong><small>50 минут</small></div>
-            <div><span>Скульптурный лифтинг</span><strong>4 500 ₽</strong><small>60 минут</small></div>
+          <div class="cosmetology__actions">
+            <div class="cosmetology__device"><span>Оригинальный аппарат</span><strong>LPG Cellu M6 Alliance</strong></div>
+            <div class="story-actions">
+              <a class="text-link story-cta" href="https://dikidi.net/1905232" target="_blank" rel="noopener">Выбрать уход <span aria-hidden="true">↗</span></a>
+              <a class="text-link story-cta" href="tel:+79114522727">Уточнить по телефону <span aria-hidden="true">→</span></a>
+            </div>
           </div>
-          <a class="text-link story-cta" href="https://dikidi.net/1905232" target="_blank" rel="noopener">Выбрать уход <span aria-hidden="true">↗</span></a>
         </div>
         <div class="cosmetology__visual reveal reveal--delay-1">
-          <img src="assets/images/lpg.webp" alt="Светлый кабинет LPG-массажа в Ле Бурже" width="1200" height="1500" loading="lazy">
+          <img src="assets/images/lpg.webp" alt="Оригинальный аппарат LPG Cellu M6 Alliance в кабинете Ле Бурже" width="1200" height="1500" loading="lazy">
           <div class="cosmetology__label" aria-hidden="true"><span>бережно</span><strong>к себе</strong></div>
         </div>
       </div>
@@ -333,9 +374,10 @@
     <section class="films section tone-section" data-motion-lines aria-labelledby="films-title">
       <div class="section-sketch section-sketch--films" aria-hidden="true">
         <svg viewBox="0 0 1600 800" preserveAspectRatio="none">
-          <path class="art-draw" pathLength="1" d="M46 151l213 105 202-163 216 132 221-103 183 142 243-164 230 99"/>
-          <circle class="art-node" cx="259" cy="256" r="13"/><circle class="art-node" cx="461" cy="93" r="8"/><circle class="art-node" cx="898" cy="122" r="15"/><circle class="art-node" cx="1324" cy="100" r="9"/>
-          <path class="art-draw art-draw--late" pathLength="1" d="M-80 720h345v-95h244v95h322v-142h265v142h578"/>
+          <path class="art-draw" pathLength="1" d="M-150 104c260-129 467-78 627 59 154 132 336 146 548 27s426-125 746 6"/>
+          <path class="art-draw art-draw--late" pathLength="1" d="M1262-110c-137 165-159 317-63 421 92 99 246 93 354-13 95-93 181-99 286-32"/>
+          <path class="art-draw" pathLength="1" d="M-160 676c246-157 469-130 627 7 147 127 314 138 514 24s425-121 789 27"/>
+          <path class="art-draw art-draw--late" pathLength="1" d="M-128 426c171-118 318-97 409 21 84 108 74 224-27 309-79 66-55 133 81 198 177 85 333 44 452-119s332-208 559-86 333 119 443 34"/>
         </svg>
       </div>
       <div class="container">
@@ -361,13 +403,26 @@
       </div>
     </section>
 
-    <section class="offers section tone-section" id="offers" data-motion-lines aria-labelledby="offers-title">
-      <div class="section-sketch section-sketch--offers" aria-hidden="true">
-        <svg viewBox="0 0 1600 1050" preserveAspectRatio="none">
-          <ellipse class="art-draw" pathLength="1" cx="1378" cy="179" rx="268" ry="154"/>
-          <path class="art-draw art-draw--late" pathLength="1" d="M-60 370c255-106 448-79 597 21s324 126 526 12"/>
-        </svg>
+    <div class="care-pair care-pair--memberships tone-section">
+      <div class="container care-pair__grid">
+        <section class="memberships section" id="memberships" aria-labelledby="memberships-title">
+          <div class="memberships__card reveal">
+            <div class="memberships__rings" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="memberships__copy">
+              <p class="eyebrow">Регулярная забота о себе</p>
+              <h2 id="memberships-title">Абонементы —<br><em>для вашего ритма</em></h2>
+            </div>
+            <div class="memberships__details">
+              <p>Не разовый повод, а привычка возвращаться к воде, движению и восстановлению. Администратор поможет подобрать подходящий формат посещений.</p>
+              <a class="button button--dark" href="tel:+79114522727">Узнать об абонементах <span aria-hidden="true">→</span></a>
+              <a class="memberships__phone" href="tel:+79114522727">+7 911 452 27 27</a>
+            </div>
+          </div>
+        </section>
       </div>
+    </div>
+
+    <section class="offers section tone-section" id="offers" aria-labelledby="offers-title">
       <div class="container">
         <div class="offers__head reveal">
           <p class="eyebrow">Повод позаботиться о себе</p>
@@ -375,53 +430,61 @@
           <p>Специальные предложения Ле Бурже — для спонтанного вечера, воскресного отдыха и регулярной заботы о себе.</p>
         </div>
 
-        <div class="offer-grid">
-          <article class="offer-card offer-card--feature reveal" data-motion-lines>
-            <span class="offer-card__badge">−50%</span>
+        <div class="offers-editorial">
+          <article class="offers-editorial__lead reveal">
+            <span class="offers-editorial__badge" aria-hidden="true">−50%</span>
             <p class="eyebrow">По воскресеньям</p>
-            <h3>Счастливое воскресенье</h3>
-            <p>Скидка 50% на посещение аквазоны в течение всего дня.</p>
-            <div class="offer-card__prices">
-              <div class="offer-card__price"><strong>2 000 ₽</strong><span>взрослый</span></div>
-              <div class="offer-card__price"><strong>1 500 ₽</strong><span>детский</span></div>
-            </div>
-            <a href="https://dikidi.net/1905232" target="_blank" rel="noopener">Выбрать время <span aria-hidden="true">↗</span></a>
+            <h3>Счастливое<br>воскресенье</h3>
+            <p class="offers-editorial__lead-copy">Скидка 50% на посещение аквазоны в течение всего дня.</p>
+            <a class="text-link" href="tel:+79114522727">Уточнить условия · +7 911 452 27 27 <span aria-hidden="true">→</span></a>
           </article>
 
-          <article class="offer-card offer-card--blue reveal reveal--delay-1" data-motion-lines>
-            <span class="offer-card__number">01</span>
-            <p class="eyebrow">Будни · 20:00–22:00</p>
-            <h3>Счастливые часы</h3>
-            <p>Два часа в аквазоне: 2 000 ₽ для взрослого и 1 500 ₽ для ребёнка.</p>
-          </article>
+          <div class="offers-editorial__index">
+            <article class="offer-row offer-row--blue reveal reveal--delay-1">
+              <span class="offer-row__number">01</span>
+              <div class="offer-row__heading">
+                <p class="eyebrow">Будни · 20:00–22:00</p>
+                <h3>Счастливые часы</h3>
+              </div>
+              <p class="offer-row__description">Специальные условия на два часа отдыха в аквазоне. Подробности уточняйте у администратора.</p>
+            </article>
 
-          <article class="offer-card offer-card--peach reveal" data-motion-lines>
-            <span class="offer-card__number">02</span>
-            <p class="eyebrow">Массаж + вода</p>
-            <h3>Продлите удовольствие</h3>
-            <p>При бронировании любого массажа — скидка 50% на посещение аквазоны.</p>
-          </article>
+            <article class="offer-row offer-row--peach reveal">
+              <span class="offer-row__number">02</span>
+              <div class="offer-row__heading">
+                <p class="eyebrow">Массаж + вода</p>
+                <h3>Продлите удовольствие</h3>
+              </div>
+              <p class="offer-row__description">При бронировании любого массажа — скидка 50% на посещение аквазоны.</p>
+            </article>
 
-          <article class="offer-card offer-card--green reveal reveal--delay-1" data-motion-lines>
-            <span class="offer-card__number">03</span>
-            <p class="eyebrow">Курс LPG</p>
-            <h3>10 + 10</h3>
-            <p>При покупке курса из 10 LPG-процедур — 10 посещений аквазоны по одному часу в подарок.</p>
-          </article>
+            <article class="offer-row offer-row--green reveal reveal--delay-1">
+              <span class="offer-row__number">03</span>
+              <div class="offer-row__heading">
+                <p class="eyebrow">Курс LPG</p>
+                <h3>10 + 10</h3>
+              </div>
+              <p class="offer-row__description">При покупке курса из 10 LPG-процедур — 10 посещений аквазоны по одному часу в подарок.</p>
+            </article>
 
-          <article class="offer-card offer-card--sand reveal" data-motion-lines>
-            <span class="offer-card__number">04</span>
-            <p class="eyebrow">Ваш день</p>
-            <h3>−10% в день рождения</h3>
-            <p>Персональная скидка 10% на все услуги комплекса.</p>
-          </article>
+            <article class="offer-row offer-row--sand reveal">
+              <span class="offer-row__number">04</span>
+              <div class="offer-row__heading">
+                <p class="eyebrow">Ваш день</p>
+                <h3>−10% в день рождения</h3>
+              </div>
+              <p class="offer-row__description">Персональная скидка 10% на все услуги комплекса.</p>
+            </article>
 
-          <article class="offer-card offer-card--rose reveal reveal--delay-1" data-motion-lines>
-            <span class="offer-card__number">05</span>
-            <p class="eyebrow">Знакомство с косметологом</p>
-            <h3>Продолжение со скидкой</h3>
-            <p>После консультации косметолога Светланы — скидка 10% на следующую процедуру.</p>
-          </article>
+            <article class="offer-row offer-row--rose reveal reveal--delay-1">
+              <span class="offer-row__number">05</span>
+              <div class="offer-row__heading">
+                <p class="eyebrow">Знакомство с косметологом</p>
+                <h3>Продолжение со скидкой</h3>
+              </div>
+              <p class="offer-row__description">После консультации косметолога Светланы — скидка 10% на следующую процедуру.</p>
+            </article>
+          </div>
         </div>
         <p class="offers__note">Подробности, сроки действия и условия предложений уточняйте у администратора.</p>
       </div>
@@ -431,7 +494,7 @@
       <div class="section-sketch section-sketch--prices" aria-hidden="true">
         <svg viewBox="0 0 1600 900" preserveAspectRatio="none">
           <path class="art-draw" pathLength="1" d="M1174-60v332h338V-60M1174 106h338M1343-60v332"/>
-          <path class="art-draw art-draw--late" pathLength="1" d="M-70 804c133-179 323-219 493-113 169 105 361 95 518-28"/>
+          <path class="art-draw art-draw--late" pathLength="1" d="M-130 818c213-179 427-207 604-87 168 114 348 109 531-13s415-141 777-34"/>
         </svg>
       </div>
       <div class="container">
@@ -440,18 +503,27 @@
             <p class="eyebrow">Выберите своё</p>
             <h2 id="prices-title">Услуги и цены</h2>
           </div>
-          <p>Показываем популярные процедуры. Полный актуальный прайс и свободное время доступны в онлайн-записи.</p>
+          <p>Показываем популярные услуги. Полный актуальный прайс и свободное время доступны в онлайн-записи.</p>
         </div>
 
         <div class="price-tabs reveal" role="tablist" aria-label="Категории услуг">
-          <button type="button" role="tab" aria-selected="true" aria-controls="panel-massage" id="tab-massage" data-price-tab="massage">Массажи</button>
+          <button type="button" role="tab" aria-selected="true" aria-controls="panel-aquazone" id="tab-aquazone" data-price-tab="aquazone">Аквазона</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="panel-massage" id="tab-massage" data-price-tab="massage">Массажи</button>
           <button type="button" role="tab" aria-selected="false" aria-controls="panel-spa" id="tab-spa" data-price-tab="spa">SPA-ритуалы</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="panel-hardware" id="tab-hardware" data-price-tab="hardware">Аппаратный массаж</button>
           <button type="button" role="tab" aria-selected="false" aria-controls="panel-face" id="tab-face" data-price-tab="face">Косметология</button>
           <button type="button" role="tab" aria-selected="false" aria-controls="panel-fitness" id="tab-fitness" data-price-tab="fitness">Йога и фитнес</button>
         </div>
 
         <div class="price-panels reveal reveal--delay-1">
-          <div class="price-panel is-active" id="panel-massage" role="tabpanel" aria-labelledby="tab-massage" data-price-panel="massage">
+          <div class="price-panel is-active" id="panel-aquazone" role="tabpanel" aria-labelledby="tab-aquazone" data-price-panel="aquazone">
+            <div class="price-row"><div><h3>Гостевое посещение · взрослый</h3><p>Большой и малый бассейны, хаммам, травяная сауна и SPA-зона</p></div><span>до 4 часов</span><strong>4 000 ₽</strong></div>
+            <div class="price-row"><div><h3>Гостевое посещение · ребёнок</h3><p>Посещение аквазоны без предварительной записи</p></div><span>до 4 часов</span><strong>3 000 ₽</strong></div>
+            <div class="price-row"><div><h3>Семейное посещение</h3><p>1 взрослый + 1 ребёнок</p></div><span>до 4 часов</span><strong>5 000 ₽</strong></div>
+            <p class="price-panel__note">Для гостевого посещения запись не нужна — приходите в удобное время или <a href="tel:+79114522727">уточните детали у администратора</a>.</p>
+          </div>
+
+          <div class="price-panel" id="panel-massage" role="tabpanel" aria-labelledby="tab-massage" data-price-panel="massage" hidden>
             <div class="price-row"><div><h3>Классический массаж</h3><p>Мягкое восстановление и глубокое расслабление</p></div><span>60 мин</span><strong>3 500 ₽</strong></div>
             <div class="price-row"><div><h3>Общий массаж</h3><p>Проработка всего тела от стоп до плеч</p></div><span>90 мин</span><strong>5 200 ₽</strong></div>
             <div class="price-row"><div><h3>Массаж спины</h3><p>Шейно-воротниковая зона, лопатки и поясница</p></div><span>40 мин</span><strong>2 300 ₽</strong></div>
@@ -465,8 +537,14 @@
             <div class="price-row"><div><h3>SPA-уход по телу</h3><p>Скрабирование, обёртывание и массаж</p></div><span>120 мин</span><strong>7 500 ₽</strong></div>
           </div>
 
+          <div class="price-panel" id="panel-hardware" role="tabpanel" aria-labelledby="tab-hardware" data-price-panel="hardware" hidden>
+            <div class="price-row"><div><h3>LPG-массаж тела</h3><p>Процедура на оригинальном аппарате LPG Cellu M6 Alliance</p></div><span>60 мин</span><strong>3 500 ₽</strong></div>
+            <div class="price-row"><div><h3>LPG-массаж лица</h3><p>Аппаратный уход для тонуса и свежести кожи</p></div><span>30 мин</span><strong>1 750 ₽</strong></div>
+            <div class="price-row"><div><h3>Миостимуляция тела</h3><p>Аппаратная процедура для работы с мышечным тонусом</p></div><span>30 мин</span><strong>1 700 ₽</strong></div>
+          </div>
+
           <div class="price-panel" id="panel-face" role="tabpanel" aria-labelledby="tab-face" data-price-panel="face" hidden>
-            <div class="price-row"><div><h3>Комплексная чистка лица</h3><p>Ультразвуковое и механическое очищение</p></div><span>80 мин</span><strong>3 500 ₽</strong></div>
+            <div class="price-row"><div><h3>Комплексная чистка лица</h3><p>Ультразвуковое и механическое очищение</p></div><span>90 мин</span><strong>3 500 ₽</strong></div>
             <div class="price-row"><div><h3>Пилинг лица</h3><p>Индивидуально подобранное мягкое обновление</p></div><span>50 мин</span><strong>3 000 ₽</strong></div>
             <div class="price-row"><div><h3>Уход «Сияние»</h3><p>Детокс-маска, пластический массаж и пилинг</p></div><span>50 мин</span><strong>2 500 ₽</strong></div>
             <div class="price-row"><div><h3>Скульптурный лифтинг</h3><p>Классический и буккальный массаж лица</p></div><span>60 мин</span><strong>4 500 ₽</strong></div>
@@ -487,30 +565,37 @@
       </div>
     </section>
 
-    <section class="final-cta section tone-section" aria-labelledby="final-title">
-      <div class="container">
-        <div class="final-cta__card reveal" data-motion-lines>
-          <div class="final-cta__orb final-cta__orb--one" aria-hidden="true"></div>
-          <div class="final-cta__orb final-cta__orb--two" aria-hidden="true"></div>
-          <div class="final-cta__orbit final-cta__orbit--one" aria-hidden="true"></div>
-          <div class="final-cta__orbit final-cta__orbit--two" aria-hidden="true"></div>
-          <p class="eyebrow">Вы уже достаточно сделали сегодня</p>
-          <h2 id="final-title">Теперь — время<br><em>для себя</em></h2>
-          <p>Выберите процедуру онлайн или позвоните — администратор поможет собрать ваш идеальный сценарий отдыха.</p>
-          <div class="final-cta__actions">
-            <a class="button button--dark" href="https://dikidi.net/1905232" target="_blank" rel="noopener">Оставить заявку <span aria-hidden="true">↗</span></a>
-            <a class="final-cta__phone" href="tel:+79114522727">+7 911 452 27 27</a>
+    <div class="care-pair care-pair--final tone-section">
+      <div class="container care-pair__grid">
+        <section class="final-cta section" aria-labelledby="final-title">
+          <div class="final-cta__card reveal">
+            <div class="final-cta__rings" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="final-cta__copy">
+              <p class="eyebrow">Вы уже достаточно сделали сегодня</p>
+              <h2 id="final-title" aria-label="Теперь время — для себя">
+                <span>Теперь время</span>
+                <span class="final-cta__dash" aria-hidden="true"></span>
+                <em>для себя</em>
+              </h2>
+            </div>
+            <div class="final-cta__details">
+              <p>Выберите процедуру онлайн или позвоните — администратор поможет собрать ваш идеальный сценарий отдыха.</p>
+              <div class="final-cta__actions">
+                <a class="button button--dark" href="https://dikidi.net/1905232" target="_blank" rel="noopener">Забронировать самостоятельно <span aria-hidden="true">↗</span></a>
+                <a class="final-cta__phone" href="tel:+79114522727">+7 911 452 27 27</a>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
       </div>
-    </section>
+    </div>
 
     <section class="contacts section tone-section" id="contacts" data-motion-lines aria-labelledby="contacts-title">
       <div class="section-sketch section-sketch--contacts" aria-hidden="true">
         <svg viewBox="0 0 1600 700" preserveAspectRatio="none">
           <path class="art-draw" pathLength="1" d="M-45 581c161-214 340-180 471-324 121-133 249-114 328 17 82 135 213 142 311 28 103-120 209-115 314 16 75 93 164 111 268 72"/>
           <circle class="art-node" cx="426" cy="257" r="18"/><circle class="art-node" cx="1065" cy="302" r="12"/>
-          <path class="art-draw art-draw--late" pathLength="1" d="M1341 72v178h189V72M1383 72V21h105v51"/>
+          <path class="art-draw art-draw--late" pathLength="1" d="M1224-90c-92 142-70 267 61 337 126 67 238 42 342-77 73-83 135-109 215-78"/>
         </svg>
       </div>
       <div class="container contacts__grid">
