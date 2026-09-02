@@ -2863,6 +2863,16 @@ button:focus-visible {
   50% { opacity: .42; transform: scale(1.18); }
 }
 
+.is-motion-paused *,
+.is-motion-paused::before,
+.is-motion-paused::after {
+  animation-play-state: paused !important;
+}
+
+.is-motion-paused :is(.art-layer, .memberships__rings span, .final-cta__rings span) {
+  will-change: auto;
+}
+
 .story-cta {
   position: relative;
   z-index: 3;
