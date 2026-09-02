@@ -9,14 +9,14 @@
   <meta property="og:description" content="Акватермальный SPA-комплекс в Калининграде: аквазона, плавание, абонементы, массаж, косметология и практики восстановления.">
   <meta property="og:image" content="assets/images/hero-pool.jpg">
   <title>Ле Бурже — акватермальный SPA-комплекс</title>
-  <link rel="icon" href="assets/images/lebourget-logo-transparent.webp" type="image/webp">
+  <link rel="icon" href="assets/images/lebourget-logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <header class="site-header" data-header>
     <a class="brand" href="#top" aria-label="Ле Бурже — на главную">
-      <img class="brand__logo" src="assets/images/lebourget-logo-transparent.webp" alt="Ле Бурже" width="1200" height="400">
+      <img class="brand__logo" src="assets/images/lebourget-logo.svg" alt="Ле Бурже" width="3000" height="1000">
       <span class="brand__caption">SPA · Калининград</span>
     </a>
 
@@ -40,13 +40,17 @@
 
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <video class="hero__video" id="hero-video" muted loop playsinline preload="none" data-src="assets/video/lebourget-hero.mp4" aria-hidden="true"></video>
+      <video class="hero__video" id="hero-video" muted loop playsinline preload="none" poster="assets/images/lebourget-hero-poster.jpg" data-src="assets/video/lebourget-hero.mp4" aria-hidden="true"></video>
       <div class="hero__shade"></div>
       <div class="hero__glow hero__glow--peach"></div>
       <div class="hero__glow hero__glow--blue"></div>
 
+      <div class="hero__brand-lockup" aria-label="Ле Бурже — акватермальный spa-комплекс">
+        <img src="assets/images/lebourget-logo.svg" alt="Ле Бурже" width="3000" height="1000">
+        <span>акватермальный spa-комплекс</span>
+      </div>
+
       <div class="hero__content container">
-        <p class="hero__eyebrow reveal">Акватермальный SPA-комплекс в Калининграде</p>
         <h1 id="hero-title" class="hero__title reveal reveal--delay-1">
           Всё, чтобы<br>
           <em>вернуться к себе</em>
@@ -62,13 +66,6 @@
       </div>
 
     </section>
-
-    <div class="ribbon" aria-hidden="true">
-      <div class="ribbon__track">
-        <div class="ribbon__group"><span>Бассейн</span><i>✦</i><span>Хаммам</span><i>✦</i><span>Массаж</span><i>✦</i><span>Косметология</span><i>✦</i><span>Йога</span><i>✦</i><span>Фитнес</span><i>✦</i></div>
-        <div class="ribbon__group"><span>Бассейн</span><i>✦</i><span>Хаммам</span><i>✦</i><span>Массаж</span><i>✦</i><span>Косметология</span><i>✦</i><span>Йога</span><i>✦</i><span>Фитнес</span><i>✦</i></div>
-      </div>
-    </div>
 
     <section class="intro section tone-section" id="about" data-motion-lines>
       <div class="section-sketch section-sketch--intro" aria-hidden="true">
@@ -89,15 +86,28 @@
         </div>
 
         <div class="intro__visual reveal reveal--delay-1">
-          <figure class="organic-frame intro__image-main">
-            <img src="assets/images/interior.webp" alt="Светлый интерьер зоны отдыха Ле Бурже" width="1200" height="1500" loading="lazy">
-          </figure>
-          <figure class="intro__image-small">
-            <img src="assets/images/intro-detail.webp" alt="Тёплый кабинет ухода Ле Бурже в терракотовых и молочных оттенках" width="1350" height="1800" loading="lazy">
-          </figure>
-          <div class="intro__seal" aria-hidden="true">
-            <img class="intro__seal-logo" src="assets/images/lebourget-logo-transparent.webp" alt="" width="1200" height="400">
-            <span>отдых · баланс · забота</span>
+          <div class="intro-carousel" data-intro-carousel tabindex="0" role="region" aria-roledescription="carousel" aria-label="Интерьеры Ле Бурже">
+            <div class="intro-carousel__viewport">
+              <div class="intro-carousel__track" data-carousel-track>
+                <figure class="intro-carousel__slide is-active" data-carousel-slide aria-hidden="false">
+                  <img src="assets/images/interior.webp" alt="Светлая зона отдыха Ле Бурже с коралловыми креслами" width="1200" height="1500" loading="lazy">
+                </figure>
+                <figure class="intro-carousel__slide" data-carousel-slide aria-hidden="true">
+                  <img src="assets/images/intro-detail.webp" alt="Тёплый кабинет ухода в коралловых и молочных оттенках" width="1350" height="1800" loading="lazy">
+                </figure>
+                <figure class="intro-carousel__slide" data-carousel-slide aria-hidden="true">
+                  <img src="assets/images/massage-room.webp" alt="Светлый массажный кабинет Ле Бурже в бежевых оттенках" width="1800" height="1200" loading="lazy">
+                </figure>
+                <figure class="intro-carousel__slide" data-carousel-slide aria-hidden="true">
+                  <img src="assets/images/hamam.webp" alt="Турецкий хаммам Ле Бурже с тёплой подсветкой" width="1800" height="1200" loading="lazy">
+                </figure>
+              </div>
+            </div>
+            <div class="intro-carousel__controls">
+              <button type="button" class="intro-carousel__arrow" data-carousel-prev aria-label="Предыдущая фотография"><span aria-hidden="true">←</span></button>
+              <p class="intro-carousel__counter" aria-live="polite"><span data-carousel-current>01</span><span aria-hidden="true"> / </span><span class="visually-hidden">из </span><span>04</span></p>
+              <button type="button" class="intro-carousel__arrow" data-carousel-next aria-label="Следующая фотография"><span aria-hidden="true">→</span></button>
+            </div>
           </div>
         </div>
       </div>
@@ -175,27 +185,22 @@
       </div>
     </section>
 
-    <section class="aquazone section tone-section story-section" id="aquazone" data-image-side="left" data-motion-lines aria-labelledby="aquazone-title">
+    <section class="aquazone section tone-section story-section" id="aquazone" data-image-side="right" data-motion-lines aria-labelledby="aquazone-title">
       <div class="aquazone__wash" aria-hidden="true"></div>
       <div class="line-art line-art--water" aria-hidden="true">
         <svg viewBox="0 0 1600 1000" preserveAspectRatio="none">
           <g class="art-layer art-layer--one">
-            <path class="art-draw" pathLength="1" d="M-170 248C120 92 286 390 536 247S947 106 1163 256s360 86 572-47"/>
-            <path class="art-draw art-draw--late" pathLength="1" d="M-120 701c203-184 389-37 556-130s358-171 540-23 372 144 757-40"/>
+            <path class="art-draw" pathLength="1" d="M-190 174C74 34 282 70 488 202s427 115 622-22 376-127 678-13"/>
+            <path class="art-draw art-draw--late" pathLength="1" d="M-150 872c252-194 472-132 657-9 178 118 358 94 540-28s389-119 728 17"/>
           </g>
           <g class="art-layer art-layer--two">
-            <ellipse class="art-draw art-draw--late" pathLength="1" cx="1390" cy="456" rx="260" ry="365"/>
-            <circle class="art-float" cx="215" cy="555" r="64"/>
-            <circle class="art-float art-float--small" cx="324" cy="468" r="18"/>
+            <path class="art-draw art-draw--late" pathLength="1" d="M-90 612C78 488 182 404 278 285c102-126 236-147 356-62"/>
+            <ellipse class="art-draw art-draw--late" pathLength="1" cx="1580" cy="510" rx="248" ry="382"/>
           </g>
         </svg>
       </div>
       <div class="container aquazone__grid">
-        <div class="aquazone__visual reveal">
-          <img src="assets/images/hero-pool.webp" alt="Панорамный вид большого бассейна Ле Бурже" width="1100" height="1600" loading="lazy">
-          <div class="aquazone__stamp"><strong>29°</strong><span>температура воды</span></div>
-        </div>
-        <div class="aquazone__copy reveal reveal--delay-1">
+        <div class="aquazone__copy reveal">
           <p class="eyebrow">Вода меняет ритм</p>
           <h2 id="aquazone-title">Аквазона для <em>полной перезагрузки</em></h2>
           <p class="aquazone__lead">Свет, вода и тишина соединяются здесь в одно ощущение: можно никуда не спешить.</p>
@@ -215,19 +220,32 @@
             <a class="text-link story-cta" href="tel:+79114522727">Подобрать формат по телефону <span aria-hidden="true">→</span></a>
           </div>
         </div>
+        <div class="aquazone__visual reveal reveal--delay-1">
+          <img src="assets/images/hero-pool.webp" alt="Панорамный вид большого бассейна Ле Бурже" width="1100" height="1600" loading="lazy">
+          <div class="aquazone__stamp"><strong>29°</strong><span>температура воды</span></div>
+        </div>
       </div>
     </section>
 
-    <section class="swimming section tone-section" id="swimming" data-motion-lines aria-labelledby="swimming-title">
+    <section class="swimming section tone-section" id="swimming" data-image-side="left" data-motion-lines aria-labelledby="swimming-title">
       <div class="section-sketch section-sketch--swimming" aria-hidden="true">
         <svg viewBox="0 0 1600 1000" preserveAspectRatio="none">
-          <path class="art-draw" pathLength="1" d="M-120 244C174 72 380 96 592 232s438 165 650 12 352-132 518-28"/>
-          <path class="art-draw art-draw--late" pathLength="1" d="M-170 704c242-174 470-168 650-22 183 148 389 159 612 2s438-185 694-47"/>
-          <path class="art-draw art-draw--late" pathLength="1" d="M452-90c-89 182-52 343 104 421 178 89 263 232 196 420-35 99-19 194 66 294"/>
+          <path class="art-draw" pathLength="1" d="M-160 194C91 67 284 81 468 205s370 159 568 33 405-169 734-54"/>
+          <path class="art-draw art-draw--late" pathLength="1" d="M-180 818c286-196 503-151 686-23 176 124 348 130 543 7s407-151 744-41"/>
+          <path class="art-draw art-draw--late" pathLength="1" d="M-92 550c147-102 251-208 326-345C309 69 410 12 558-5"/>
         </svg>
       </div>
       <div class="container swimming__grid">
-        <div class="swimming__copy reveal">
+        <div class="swimming__visual reveal">
+          <figure class="swimming__image swimming__image--main">
+            <img src="assets/images/pool-main.webp" alt="Большой бассейн с четырьмя дорожками для занятий плаванием" width="1200" height="1500" loading="lazy">
+          </figure>
+          <figure class="swimming__image swimming__image--small">
+            <img src="assets/images/pool-kids.webp" alt="Малый бассейн аквазоны Ле Бурже" width="1800" height="1200" loading="lazy">
+          </figure>
+          <div class="swimming__note" aria-hidden="true"><strong>вода</strong><span>движение · навык · радость</span></div>
+        </div>
+        <div class="swimming__copy reveal reveal--delay-1">
           <p class="eyebrow">Самое популярное направление</p>
           <h2 id="swimming-title">Плавание, которое<br><em>становится привычкой</em></h2>
           <p class="swimming__lead">От первого знакомства с водой до уверенной техники и регулярных тренировок — для каждого возраста и своего ритма.</p>
@@ -242,15 +260,6 @@
             <a class="text-link" href="https://dikidi.net/1905232" target="_blank" rel="noopener">Посмотреть расписание <span aria-hidden="true">↗</span></a>
             <a class="text-link swimming__phone" href="tel:+79114522727">Подобрать формат по телефону <span aria-hidden="true">→</span></a>
           </div>
-        </div>
-        <div class="swimming__visual reveal reveal--delay-1">
-          <figure class="swimming__image swimming__image--main">
-            <img src="assets/images/pool-main.webp" alt="Большой бассейн с четырьмя дорожками для занятий плаванием" width="1200" height="1500" loading="lazy">
-          </figure>
-          <figure class="swimming__image swimming__image--small">
-            <img src="assets/images/pool-kids.webp" alt="Малый бассейн аквазоны Ле Бурже" width="1800" height="1200" loading="lazy">
-          </figure>
-          <div class="swimming__note" aria-hidden="true"><strong>вода</strong><span>движение · навык · радость</span></div>
         </div>
       </div>
     </section>
@@ -594,7 +603,6 @@
       <div class="section-sketch section-sketch--contacts" aria-hidden="true">
         <svg viewBox="0 0 1600 700" preserveAspectRatio="none">
           <path class="art-draw" pathLength="1" d="M-45 581c161-214 340-180 471-324 121-133 249-114 328 17 82 135 213 142 311 28 103-120 209-115 314 16 75 93 164 111 268 72"/>
-          <circle class="art-node" cx="426" cy="257" r="18"/><circle class="art-node" cx="1065" cy="302" r="12"/>
           <path class="art-draw art-draw--late" pathLength="1" d="M1720 520c-160-10-290-80-340-200-40-95-20-170 60-230s120-10 260-70"/>
         </svg>
       </div>
@@ -622,19 +630,43 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container site-footer__grid">
-      <a class="brand brand--footer" href="#top">
-        <img class="brand__logo" src="assets/images/lebourget-logo-transparent.webp" alt="Ле Бурже" width="1200" height="400">
-        <span class="brand__caption">искусство полноценного отдыха</span>
-      </a>
-      <p>Акватермальный SPA-комплекс<br>в Калининграде</p>
-      <div class="site-footer__links">
-        <a href="#directions">Направления</a>
-        <a href="#offers">Акции</a>
-        <a href="#prices">Цены</a>
-        <a href="#contacts">Контакты</a>
+    <div class="container">
+      <details class="legal-details" id="legal-details">
+        <summary>
+          <span>Юридическая информация</span>
+          <span class="legal-details__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="legal-details__panel">
+          <div class="legal-details__heading">
+            <p class="eyebrow">Реквизиты</p>
+            <h2>ООО «Андромеда»</h2>
+            <p>Деятельность физкультурно-оздоровительная</p>
+          </div>
+          <dl class="legal-details__grid">
+            <div><dt>Руководитель</dt><dd>Генеральный директор Детушев Павел Александрович, действует на основании Устава</dd></div>
+            <div><dt>Регистрационные данные</dt><dd>ИНН 3906405650<br>КПП 390601001<br>ОГРН 1213900010532<br>ОКПО 54668852</dd></div>
+            <div><dt>Юридический адрес</dt><dd>236029, Калининградская область, г. Калининград, ул. Верхние Поля, зд. 12, к. 2, пом. 3</dd></div>
+            <div><dt>Фактический адрес и телефон</dt><dd>236029, Калининградская область, г. Калининград, ул. Верхние Поля, зд. 12, к. 6<br><a href="tel:+79110704775">+7 911 070 47 75</a></dd></div>
+            <div><dt>Расчётный счёт</dt><dd>40702810020710000931<br>Калининградское отделение № 8626 ПАО Сбербанк, г. Калининград</dd></div>
+            <div><dt>Банковские данные</dt><dd>БИК 042748634<br>к/с 30101810100000000634<br>ОКВЭД 96.04</dd></div>
+          </dl>
+        </div>
+      </details>
+
+      <div class="site-footer__grid">
+        <a class="brand brand--footer" href="#top">
+          <img class="brand__logo" src="assets/images/lebourget-logo.svg" alt="Ле Бурже" width="3000" height="1000">
+          <span class="brand__caption">искусство полноценного отдыха</span>
+        </a>
+        <p>Акватермальный SPA-комплекс<br>в Калининграде</p>
+        <div class="site-footer__links">
+          <a href="#directions">Направления</a>
+          <a href="#offers">Акции</a>
+          <a href="#prices">Цены</a>
+          <a href="#contacts">Контакты</a>
+        </div>
+        <p class="site-footer__legal">© <span data-year></span> Ле Бурже<br>Информация на сайте не является публичной офертой.</p>
       </div>
-      <p class="site-footer__legal">© <span data-year></span> Ле Бурже<br>Информация на сайте не является публичной офертой.</p>
     </div>
   </footer>
 

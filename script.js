@@ -203,6 +203,53 @@ if (reduceMotion || !('IntersectionObserver' in window)) {
   revealItems.forEach((item) => revealObserver.observe(item));
 }
 
+const introCarousel = document.querySelector('[data-intro-carousel]');
+
+if (introCarousel) {
+  const slides = [...introCarousel.querySelectorAll('[data-carousel-slide]')];
+  const previousButton = introCarousel.querySelector('[data-carousel-prev]');
+  const nextButton = introCarousel.querySelector('[data-carousel-next]');
+  const currentLabel = introCarousel.querySelector('[data-carousel-current]');
+  let activeSlide = 0;
+  let touchStartX = null;
+
+  const showSlide = (nextIndex) => {
+    activeSlide = (nextIndex + slides.length) % slides.length;
+    slides.forEach((slide, index) => {
+      const isActive = index === activeSlide;
+      slide.classList.toggle('is-active', isActive);
+      slide.setAttribute('aria-hidden', String(!isActive));
+      slide.setAttribute('aria-label', `${index + 1} из ${slides.length}`);
+    });
+
+    if (currentLabel) currentLabel.textContent = String(activeSlide + 1).padStart(2, '0');
+  };
+
+  previousButton?.addEventListener('click', () => showSlide(activeSlide - 1));
+  nextButton?.addEventListener('click', () => showSlide(activeSlide + 1));
+
+  introCarousel.addEventListener('keydown', (event) => {
+    if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+    event.preventDefault();
+    showSlide(activeSlide + (event.key === 'ArrowRight' ? 1 : -1));
+  });
+
+  introCarousel.addEventListener('touchstart', (event) => {
+    touchStartX = event.changedTouches[0]?.clientX ?? null;
+  }, { passive: true });
+
+  introCarousel.addEventListener('touchend', (event) => {
+    if (touchStartX === null) return;
+    const touchEndX = event.changedTouches[0]?.clientX ?? touchStartX;
+    const distance = touchEndX - touchStartX;
+    touchStartX = null;
+    if (Math.abs(distance) < 45) return;
+    showSlide(activeSlide + (distance < 0 ? 1 : -1));
+  }, { passive: true });
+
+  showSlide(0);
+}
+
 const tabs = [...document.querySelectorAll('[data-price-tab]')];
 const panels = [...document.querySelectorAll('[data-price-panel]')];
 
@@ -291,7 +338,7 @@ if ('IntersectionObserver' in window) {
   lazyVideos.forEach(attachVideoSource);
 }
 
-const mobileBookBlockers = [...document.querySelectorAll('.story-section, .swimming, .memberships, .offers, .prices, .final-cta, .contacts')];
+const mobileBookBlockers = [...document.querySelectorAll('.intro, .story-section, .swimming, .memberships, .offers, .prices, .final-cta, .contacts, .site-footer')];
 
 if (mobileBook && mobileBookBlockers.length && 'IntersectionObserver' in window) {
   const visibleBlockers = new Set();
